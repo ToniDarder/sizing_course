@@ -1,0 +1,38 @@
+[tool.black]
+    line-length = 100
+
+[tool.poetry]
+    name = "sizing_course"
+    version = "0.0.0"
+    description = "Jupyter Book Sizing Course"
+    authors = [
+        "Scott DELBECQ <scott.delbecq@isae-supaero.fr>",
+        "Marc BUDINGER <marc.budinger@insa-toulouse.fr>",
+    ]
+    keywords = [
+        "sizing",
+        "optimization"
+    ]
+    classifiers = [
+        "Environment :: Console",
+        "Intended Audience :: Science/Research",
+        "Intended Audience :: Education",
+        "License :: OSI Approved :: MIT License",
+        "Natural Language :: English",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python :: 3.7",
+        "Topic :: Scientific/Engineering :: Physics"
+    ]
+    include = [
+        "LICENSE"
+    ]
+
+[tool.poetry.dependencies]
+python = "^3.7, <3.9"
+cloudpickle="^2"
+fast-oad="^1.4.0"
+statsmodels="^0.12"
+openpyxl="^3"
+xlrd="^2"
+jupyter-book="^0.13.0"
+rise="^5.7.1"
