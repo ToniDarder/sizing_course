@@ -37,5 +37,7 @@ parts:
   - file: class/CM1/summary
     title: CM1 - Introduction to preliminary design of technological systems
     sections:
-      - file: class/CM1/1-objectives-ressources
+      - file: class/CM1/1-objectives_and_ressources
       - file: class/CM1/2-needs_and_general_methodology
+      - file: class/CM1/3-scenarios_and_design_drivers
+      - file: class/CM1/4-quizz
