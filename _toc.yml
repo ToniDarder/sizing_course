@@ -1,14 +1,9 @@
 format: jb-book
-root: about/unsyllabus
+root: about/syllabus
 parts:
 - caption: About this course
   chapters:
-  - file: about/pre_term
   - file: about/syllabus
-  - file: about/course_schedule
-  - file: about/accommodations
-  - file: about/doing_well
-  - file: about/faq
 - caption: Lectures
   chapters:
   - file: class/Lecture1/summary
