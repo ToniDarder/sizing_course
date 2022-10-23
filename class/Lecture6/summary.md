@@ -1,4 +1,4 @@
-(page_lecture_5)=
+(page_lecture_6)=
 Lecture 6 - Life Cycle Assessment (LCA) and sustainable prospectives scenarios
 =======================
 

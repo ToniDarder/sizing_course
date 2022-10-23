@@ -12,7 +12,7 @@ parts:
 - caption: Lectures
   chapters:
   - file: class/Lecture1/summary
-    title: Lecture 1 - Introduction to preliminary design of technological systems
+    title: Lecture 1 - Introduction
     sections:
       - file: class/Lecture1/1-objectives_and_ressources
       - file: class/Lecture1/2-needs_and_general_methodology
@@ -25,3 +25,35 @@ parts:
       - file: class/Lecture2/2-linear_regressions
       - file: class/Lecture2/3-scaling_laws
       - file: class/Lecture2/4-quizz
+  - file: class/Lecture3/summary
+    title: Lecture 3 - Optimal sizing procedures
+    sections:
+      - file: class/Lecture3/1-design_and_optimization_problems
+      - file: class/Lecture3/2-optimization_examples
+      - file: class/Lecture3/3-sizing_procedures
+      - file: class/Lecture3/4-sizing_procedure_examples
+      - file: class/Lecture3/5-quizz
+  - file: class/Lecture4/summary
+    title: Lecture 4 - Simulation and evaluation models
+    sections:
+      - file: class/Lecture4/1-simulation_models
+      - file: class/Lecture4/2-simulation_model_examples
+      - file: class/Lecture4/3-evaluation_models
+      - file: class/Lecture4/4-evaluation_model_examples
+      - file: class/Lecture4/5-quizz
+  - file: class/Lecture5/summary
+    title: Lecture 5 - MDAO and surrogate models
+    sections:
+      - file: class/Lecture5/1-mdao
+      - file: class/Lecture5/2-mdao_examples
+      - file: class/Lecture5/3-surrogate_models
+      - file: class/Lecture5/4-surrogate_model_examples
+      - file: class/Lecture5/5-quizz
+  - file: class/Lecture6/summary
+    title: Lecture 6 - MDAO and surrogate models
+    sections:
+      - file: class/Lecture6/1-lca
+      - file: class/Lecture6/2-lca_examples
+      - file: class/Lecture6/3-sustainable_scenarios
+      - file: class/Lecture6/4-sustainable_scenario_examples
+      - file: class/Lecture6/5-quizz
