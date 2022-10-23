@@ -41,3 +41,10 @@ parts:
       - file: class/Lecture1/2-needs_and_general_methodology
       - file: class/Lecture1/3-scenarios_and_design_drivers
       - file: class/Lecture1/4-quizz
+  - file: class/Lecture2/summary
+    title: Lecture 2 - Estimation models
+    sections:
+      - file: class/Lecture2/1-needs
+      - file: class/Lecture2/2-linear_regressions
+      - file: class/Lecture2/3-scaling_laws
+      - file: class/Lecture2/4-quizz
