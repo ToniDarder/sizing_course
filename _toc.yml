@@ -1,5 +1,4 @@
 format: jb-book
-root: about/syllabus
 parts:
 - caption: About this course
   chapters:
