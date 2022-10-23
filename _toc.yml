@@ -1,4 +1,5 @@
 format: jb-book
+root: about/homepage
 parts:
 - caption: About this course
   chapters:
