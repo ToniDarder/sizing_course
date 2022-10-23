@@ -50,7 +50,7 @@ parts:
       - file: class/Lecture5/4-surrogate_model_examples
       - file: class/Lecture5/5-quizz
   - file: class/Lecture6/summary
-    title: Lecture 6 - MDAO and surrogate models
+    title: Lecture 6 - LCA and sustainable scenarios
     sections:
       - file: class/Lecture6/1-lca
       - file: class/Lecture6/2-lca_examples
