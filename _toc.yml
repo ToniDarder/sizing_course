@@ -32,7 +32,7 @@ parts:
         title: Demo 4 - Chemistry
       - url: https://firas.moosvi.com/books/active-learning-technologies/jupyterdays/capacitor_talk/Capacitor.html
         title: Capacitor Lecture
-- caption: Part 1 - Introduction
+- caption: Lectures
   chapters:
   - file: class/Lecture1/summary
     title: Lecture 1 - Introduction to preliminary design of technological systems
