@@ -95,3 +95,17 @@ div.logo {
     right: 5%;
     top: 0%;
 }
+
+img[alt=drawing50] {
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img[alt=drawing75] {
+    width: 75%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
