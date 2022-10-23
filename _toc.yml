@@ -34,10 +34,10 @@ parts:
         title: Capacitor Lecture
 - caption: Part 1 - Introduction
   chapters:
-  - file: class/CM1/summary
-    title: CM1 - Introduction to preliminary design of technological systems
+  - file: class/Lecture1/summary
+    title: Lecture 1 - Introduction to preliminary design of technological systems
     sections:
-      - file: class/CM1/1-objectives_and_ressources
-      - file: class/CM1/2-needs_and_general_methodology
-      - file: class/CM1/3-scenarios_and_design_drivers
-      - file: class/CM1/4-quizz
+      - file: class/Lecture1/1-objectives_and_ressources
+      - file: class/Lecture1/2-needs_and_general_methodology
+      - file: class/Lecture1/3-scenarios_and_design_drivers
+      - file: class/Lecture1/4-quizz
