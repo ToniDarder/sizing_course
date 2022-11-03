@@ -54,10 +54,10 @@ parts:
       - file: class/Lecture6/5-quizz
       
   - caption: Laboratories
-  chapters:
-  - file: class/Lab1/summary
-    title: Lab 1 - DC/DC converter for ultracapacitors
-    sections:
+    chapters:
+    - file: class/Lab1/summary
+      title: Lab 1 - DC/DC converter for ultracapacitors
+      sections:
       - file: class/Lab1/00_Introduction
       - file: class/Lab1/01_CaseStudy
       - file: class/Lab1/02_Architecture
