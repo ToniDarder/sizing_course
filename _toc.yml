@@ -58,7 +58,9 @@ parts:
   - file: class/Lab-vega/summary
     title: Lab - VEGA Launcher TVC EMA
     sections:
+      - file: class/Lab-vega/1-sizing_scenarios-student
       - file: class/Lab-vega/1-sizing_scenarios
+      - file: class/Lab-vega/2-estimation_models-student
       - file: class/Lab-vega/2-estimation_models
   - file: class/Lab-watt_project/summary
     title: Lab - WATT Project DC/DC converter
