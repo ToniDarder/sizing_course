@@ -52,12 +52,17 @@ parts:
       - file: class/Lecture6/3-sustainable_scenarios
       - file: class/Lecture6/4-sustainable_scenario_examples
       - file: class/Lecture6/5-quizz
+
 - caption: Laboratories
   chapters:
-  - file: Lab/Lab1/summary
-    title: Lab 1 - DC/DC converter for ultracapacitors
+  - file: class/Lab-vega/summary
+    title: Lab - VEGA Launcher TVC EMA
     sections:
-      - file: Lab/Lab1/00_Introduction
-      - file: Lab/Lab1/01_CaseStudy
-      - file: Lab/Lab1/02_Architecture
-      - file: Lab/Lab1/03_SizingScenarios
+      - file: class/Lab-vega/1-sizing_scenarios
+      - file: class/Lab-vega/2-estimation_models
+  - file: class/Lab-watt_project/summary
+    title: Lab - WATT Project DC/DC converter
+  - file: class/Lab-multirotor/summary
+    title: Lab - Multirotor
+  - file: class/Lab-elevator/summary
+    title: Lab - Elevator
