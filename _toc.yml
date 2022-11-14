@@ -64,6 +64,8 @@ parts:
       - file: class/Lab-vega/2-estimation_models
   - file: class/Lab-watt_project/summary
     title: Lab - WATT Project DC/DC converter
+    sections:
+      - file: class/Lab-watt_project/01_CaseStudy
   - file: class/Lab-multirotor/summary
     title: Lab - Multirotor
   - file: class/Lab-elevator/summary
