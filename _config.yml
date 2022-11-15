@@ -1,5 +1,5 @@
 # Book settings
-title: Sizing and optimization of technological systems
+title: Sizing and optimization of mechatronic systems
 author: Marc Budinger, Scott Delbecq
 logo: images/logo.png
 copyright: ""
@@ -59,7 +59,7 @@ sphinx:
 
     myst_substitutions:
       INSTRUCTOR: "Marc Budinger, Scott Delbecq"
-      TITLE: "Sizing and optimization of technological systems"
+      TITLE: "Sizing and optimization of mechatronic systems"
       PREREQS: "One of MATH 12, PREC 12, MATH 125, MATH 126 and PHYS 11 (Physics 12 is strongly recommended)."
       COREQS: "Math 100"
       TERM: "2020 Winter Term 2"
