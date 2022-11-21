@@ -797,6 +797,14 @@ nbformat = "*"
 Sphinx = ">=2"
 
 [[package]]
+name = "jupytercards"
+version = "2.1.2"
+description = "Module to display dynamic quizzes in Jupyter notebooks and Jupyter Books. Uses JavaScript to provide"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "jupyterlab"
 version = "3.5.0"
 description = "JupyterLab computational environment"
@@ -891,6 +899,14 @@ description = "A JupyterLab extension."
 category = "main"
 optional = false
 python-versions = ">=3.6"
+
+[[package]]
+name = "jupyterquiz"
+version = "2.0.7"
+description = "Module to display dynamic quizzes in Jupyter notebooks and Jupyter Books. Uses JavaScript to provide"
+category = "main"
+optional = false
+python-versions = "*"
 
 [[package]]
 name = "kiwisolver"
@@ -2378,7 +2394,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "flake8 
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7, <3.9"
-content-hash = "fb4164b7f48e98dc868ac8661739debe8b9531605803753d6b99d2cf732c9014"
+content-hash = "b0c25522f33692212daac792ed8c3480f4801ed075f4ad421c7d5bd8a12ff3e9"
 
 [metadata.files]
 aenum = [
@@ -2595,6 +2611,7 @@ jupyter-core = []
 jupyter-server = []
 jupyter-server-mathjax = []
 jupyter-sphinx = []
+jupytercards = []
 jupyterlab = []
 jupyterlab-imarkdown = []
 jupyterlab-markup = []
@@ -2608,6 +2625,7 @@ jupyterlab-widgets = [
     {file = "jupyterlab_widgets-1.1.1-py3-none-any.whl", hash = "sha256:90ab47d99da03a3697074acb23b2975ead1d6171aa41cb2812041a7f2a08177a"},
     {file = "jupyterlab_widgets-1.1.1.tar.gz", hash = "sha256:67d0ef1e407e0c42c8ab60b9d901cd7a4c68923650763f75bf17fb06c1943b79"},
 ]
+jupyterquiz = []
 kiwisolver = []
 latexcodec = [
     {file = "latexcodec-2.0.1-py2.py3-none-any.whl", hash = "sha256:c277a193638dc7683c4c30f6684e3db728a06efb0dc9cf346db8bd0aa6c5d271"},

@@ -55,6 +55,7 @@ jupyter-core==4.11.2; python_version >= "3.7" and python_full_version < "3.0.0" 
 jupyter-server-mathjax==0.2.6; python_version >= "3.7"
 jupyter-server==1.21.0; python_version >= "3.7" and python_version < "4.0" and (python_version >= "3.7" and python_full_version < "3.0.0" and python_version < "4.0" or python_full_version >= "3.4.0" and python_version < "4" and python_version >= "3.7")
 jupyter-sphinx==0.3.2; python_version >= "3.7"
+jupytercards==2.1.2
 jupyterlab-imarkdown==0.2.0; python_version >= "3.6"
 jupyterlab-markup-expr==0.1.1; python_version >= "3.7"
 jupyterlab-markup==2.0.0; python_version >= "3.7"
@@ -62,6 +63,7 @@ jupyterlab-pygments==0.2.2; python_version >= "3.7" and python_full_version < "3
 jupyterlab-server==2.16.2; python_version >= "3.7" and python_version < "4.0"
 jupyterlab-widgets==1.1.1; python_version >= "3.7" and python_version < "4.0"
 jupyterlab==3.5.0; python_version >= "3.7" and python_version < "4.0"
+jupyterquiz==2.0.7
 kiwisolver==1.4.4; python_version >= "3.7"
 latexcodec==2.0.1; python_version >= "3.7" and python_full_version < "3.0.0" or python_full_version >= "3.4.0" and python_version >= "3.7"
 linkify-it-py==1.0.3; python_version >= "3.7"
