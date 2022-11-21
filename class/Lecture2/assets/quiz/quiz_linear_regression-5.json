@@ -1,0 +1,44 @@
+[
+    {
+        "question": "Some points have been removed. What for?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Too many points to make the calculations",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "answer": "It removes items that do not work well",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "answer": "Some components are dominated by others (it is possible to find lighter components for bigger static load)",
+                "correct": true,
+                "feedback": "Correct!"
+            }
+        ]
+    },
+    {
+        "question": "What is the equation of the regression?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "$M=0,0012$",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "answer": "$M=0,0012+0,011.C_0$",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "answer": "$M=0,0012+0,011.C_0+0,00021.C_0^2$",
+                "correct": true,
+                "feedback": "Correct!"
+            }
+        ]
+    }
+]
