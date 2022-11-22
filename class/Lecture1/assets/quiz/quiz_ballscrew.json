@@ -52,12 +52,12 @@
         "type": "multiple_choice",
         "answers": [
             {
-                "answer": "Rapid degradation",
+                "answer": "Dynamic load: Ca or Cd",
                 "correct": true,
                 "feedback": "Correct!"
             },
             {
-                "answer": "Gradual degradation",
+                "answer": "Static load: C0 or Ca0",
                 "correct": false,
                 "feedback": "Incorrect."
             }
