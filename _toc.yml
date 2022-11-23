@@ -66,6 +66,8 @@ parts:
       - file: class/Lab-vega/3-simulation_models
       - file: class/Lab-vega/4-evaluation_models-student
       - file: class/Lab-vega/4-evaluation_models
+      - file: class/Lab-vega/5-sizing_and_optimization-student
+      - file: class/Lab-vega/5-sizing_and_optimization
   - file: class/Lab-watt_project/summary
     title: Lab - WATT Project DC/DC converter
     sections:
