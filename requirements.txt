@@ -63,7 +63,7 @@ jupyterlab-pygments==0.2.2; python_version >= "3.7" and python_full_version < "3
 jupyterlab-server==2.16.2; python_version >= "3.7" and python_version < "4.0"
 jupyterlab-widgets==1.1.1; python_version >= "3.7" and python_version < "4.0"
 jupyterlab==3.5.0; python_version >= "3.7" and python_version < "4.0"
-jupyterquiz==2.0.5
+jupyterquiz==2.0.7
 kiwisolver==1.4.4; python_version >= "3.7"
 latexcodec==2.0.1; python_version >= "3.7" and python_full_version < "3.0.0" or python_full_version >= "3.4.0" and python_version >= "3.7"
 linkify-it-py==1.0.3; python_version >= "3.7"
