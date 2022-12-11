@@ -71,9 +71,16 @@ parts:
       - file: class/Lab-vega/6-sizing_and_optimization_with_mdao_using_om-student
       - file: class/Lab-vega/6-sizing_and_optimization_with_mdao_using_om
   - file: class/Lab-watt_project/summary
-    title: Lab - WATT Project DC/DC converter
+    title: Lab - WATT system - DC/DC converter sizing
     sections:
       - file: class/Lab-watt_project/01_CaseStudy
+      - file: class/Lab-watt_project/02_Architecture-Student
+      - file: class/Lab-watt_project/02_Architecture
+      - file: class/Lab-watt_project/03_SizingScenarios
+      - file: class/Lab-watt_project/04_ScalingLaws-Student
+      - file: class/Lab-watt_project/04_ScalingLaws
+      - file: class/Lab-watt_project/05_HeatSinkLinearRegression-Student
+      - file: class/Lab-watt_project/05_HeatSinkLinearRegression    
   - file: class/Lab-multirotor/summary
     title: Lab - Multirotor
   - file: class/Lab-elevator/summary
