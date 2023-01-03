@@ -81,12 +81,12 @@ parts:
       - file: class/Lab-watt_project/04_ScalingLaws
       - file: class/Lab-watt_project/05_HeatSinkLinearRegression-Student
       - file: class/Lab-watt_project/05_HeatSinkLinearRegression 
-      - file: class/Lab-watt_project/06_SizingCodeInductor.ipynb
-      - file: class/Lab-watt_project/07_SizingCodeInductor-Surrogate-Student.ipynb
-      - file: class/Lab-watt_project/07_SizingCodeInductor-Surrogate.ipynb
-      - file: class/Lab-watt_project/08_DCDC_converter_sizing_introduction-Student.ipynb
-      - file: class/Lab-watt_project/08_DCDC_converter_sizing_introduction.ipynb
-      - file: class/Lab-watt_project/09_SizingCodeDCDCconverter.ipynb
+      - file: class/Lab-watt_project/06_SizingCodeInductor
+      - file: class/Lab-watt_project/07_SizingCodeInductor-Surrogate-Student
+      - file: class/Lab-watt_project/07_SizingCodeInductor-Surrogate
+      - file: class/Lab-watt_project/08_DCDC_converter_sizing_introduction-Student
+      - file: class/Lab-watt_project/08_DCDC_converter_sizing_introduction
+      - file: class/Lab-watt_project/09_SizingCodeDCDCconverter
   - file: class/Lab-multirotor/summary
     title: Lab - Multirotor
   - file: class/Lab-elevator/summary
