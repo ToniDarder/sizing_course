@@ -79,8 +79,8 @@ parts:
       - file: class/Lab-watt_project/03_SizingScenarios
       - file: class/Lab-watt_project/04_ScalingLaws-Student
       - file: class/Lab-watt_project/04_ScalingLaws
-      - file: class/Lab-watt_project/05_HeatSinkLinearRegression-Student
-      - file: class/Lab-watt_project/05_HeatSinkLinearRegression 
+      - file: class/Lab-watt_project/05_HeatsinkLinearRegression-Student
+      - file: class/Lab-watt_project/05_HeatsinkLinearRegression
       - file: class/Lab-watt_project/06_SizingCodeInductor
       - file: class/Lab-watt_project/07_SizingCodeInductor-Surrogate-Student
       - file: class/Lab-watt_project/07_SizingCodeInductor-Surrogate
