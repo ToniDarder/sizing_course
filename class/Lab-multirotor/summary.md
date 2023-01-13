@@ -38,6 +38,14 @@ Then install the required dependencies by running:
 
 `pip install -r multirotor_sizing_isae_coa_2023_student_version/requirements.txt`
 
+```{tip}
+To zip the folder you can open a terminal at the father directory of the project and run:
+
+`zip -r my_projet.zip multirotor_sizing_isae_coa_2023_student_version`
+
+You can then download the .zip from Jupyter Hub as a normal file.
+```
+
 ### Binder
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/SizingLab/multirotor_sizing_isae_coa_2023_student_version/HEAD)
 
