@@ -24,6 +24,16 @@ Open [Jupyter Hub](https://jupyter.isae-supaero.fr), open a new terminal and clo
 
 `git clone https://github.com/SizingLab/multirotor_sizing_isae_coa_2023_student_version.git`
 
+```{tip}
+To cancel your local changes and update your project with the lastest version available on the repo you can run:
+
+`git reset --hard`
+
+`git fetch`
+
+`git pull`
+```
+
 Then install the required dependencies by running:
 
 `pip install -r multirotor_sizing_isae_coa_2023_student_version/requirements.txt`
