@@ -2,12 +2,14 @@
 
 # Syllabus
 
-## Instructors
-Marc Budinger, Scott Delbecq and Félix Pollet.
+## Authors
+- Marc Budinger (marc.budinger@insa-toulouse.fr)
+- Scott Delbecq (scott.delbecq@isae-supaero.fr)
+- Félix Pollet  (felix.pollet@isae-supaero.fr)
 
 ## Schedule (2023-2024)
-- 10 lectures (Scott Delbecq)
-- 10 labs (Scott Delbecq)
+- 5 lectures (Scott Delbecq)
+- 5 labs (Scott Delbecq)
 
 ## Course Description
 ```{warning}
