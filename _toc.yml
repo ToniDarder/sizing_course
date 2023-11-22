@@ -92,7 +92,7 @@ parts:
     sections:
       - file: laboratories/Lab-multirotor/00_Introduction
       - file: laboratories/Lab-multirotor/01_CaseStudy
-      - file: laboratories/Lab-multirotor/02_SizingScenarios-Student
-      - file: laboratories/Lab-multirotor/02_SizingScenarios
+      - file: laboratories/Lab-multirotor/02_SizingScenariosEquations-Student
+      - file: laboratories/Lab-multirotor/02_SizingScenariosEquations
   - file: laboratories/Lab-elevator/summary
     title: Lab - Elevator
