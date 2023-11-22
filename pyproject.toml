@@ -28,15 +28,14 @@
     ]
 
 [tool.poetry.dependencies]
-python = "^3.7, <3.9"
+python = "^3.8"
 cloudpickle="^2"
 fast-oad="^1.4.0"
-statsmodels="^0.12"
 matplotlib="^3.5.0"
 scipy="^1.7.0"
 openpyxl="^3"
 xlrd="^2"
-jupyter-book="^0.13.0"
+jupyter-book="^0.15.0"
 rise="^5.7.1"
 jupyterlab-markup-expr="*"
 jupyterlab_imarkdown="*"
