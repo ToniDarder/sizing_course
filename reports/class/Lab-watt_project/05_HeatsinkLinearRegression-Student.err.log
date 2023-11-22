@@ -1,0 +1,54 @@
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/nbclient/client.py", line 1305, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/jupyter_core/utils/__init__.py", line 173, in wrapped
+    return loop.run_until_complete(inner)
+  File "/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
+    return future.result()
+  File "/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/nbclient/client.py", line 705, in async_execute
+    await self.async_execute_cell(
+  File "/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/nbclient/client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/nbclient/client.py", line 914, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# Determination of the least squares estimator with the OLS function 
+# of the SatsModels package
+
+import statsmodels.api as sm
+
+model = sm.OLS(Y, X)
+results = model.fit()
+
+print('Parameters: ', results.params)
+print('R2: ', results.rsquared)
+
+# Y vector prediction
+y_OLS=results.predict(X)
+
+# plot the data 
+plt.plot(x,y, 'o',x,y_OLS, '-g')
+plt.xlabel('Temperature rise [°C]')
+plt.ylabel('Multiplication factor of thermal resistance [-]')
+plt.title('Comparison of original data (circles) and OLS regression (red)')
+plt.grid()
+plt.show()
+
+
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+Cell [0;32mIn[3], line 4[0m
+[1;32m      1[0m [38;5;66;03m# Determination of the least squares estimator with the OLS function [39;00m
+[1;32m      2[0m [38;5;66;03m# of the SatsModels package[39;00m
+[0;32m----> 4[0m [38;5;28;01mimport[39;00m [38;5;21;01mstatsmodels[39;00m[38;5;21;01m.[39;00m[38;5;21;01mapi[39;00m [38;5;28;01mas[39;00m [38;5;21;01msm[39;00m
+[1;32m      6[0m model [38;5;241m=[39m sm[38;5;241m.[39mOLS(Y, X)
+[1;32m      7[0m results [38;5;241m=[39m model[38;5;241m.[39mfit()
+
+[0;31mModuleNotFoundError[0m: No module named 'statsmodels'
+
