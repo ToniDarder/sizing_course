@@ -89,5 +89,10 @@ parts:
       - file: laboratories/Lab-watt_project/09_SizingCodeDCDCconverter
   - file: laboratories/Lab-multirotor/summary
     title: Lab - Multirotor
+    sections:
+      - file: laboratories/Lab-multirotor/00_Introduction
+      - file: laboratories/Lab-multirotor/01_CaseStudy
+      - file: laboratories/Lab-multirotor/02_SizingScenarios-Student
+      - file: laboratories/Lab-multirotor/02_SizingScenarios
   - file: laboratories/Lab-elevator/summary
     title: Lab - Elevator
