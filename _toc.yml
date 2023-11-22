@@ -1,9 +1,10 @@
 format: jb-book
 root: about/homepage
 parts:
-- caption: About this course
+- caption: Introduction and overview
   chapters:
   - file: about/syllabus
+  - file: about/installation
 - caption: Classes
   numbered: true
   maxdepth: 2
