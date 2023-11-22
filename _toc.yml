@@ -7,7 +7,7 @@ parts:
 - caption: Lectures
   chapters:
   - file: classes/Lecture1/summary
-    title: Lecture 1 - Introduction
+    title: Lecture 1 - Architecture, sizing scenarios and design drivers
     sections:
       - file: classes/Lecture1/1-objectives_and_ressources
       - file: classes/Lecture1/2-needs_and_general_methodology
