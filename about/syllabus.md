@@ -26,6 +26,9 @@ Aerospace systems are highly complex systems that often have to meet specific an
 ### Study cases
 Design optimization of a multirotor UAV
 
-### Platform
-The classes and labs are regrouped here:
-https://sizinglab.github.io/sizing_course
+## Evaluation
+- Project report
+
+## Tools:
+- Course website (https://sizinglab.github.io/sizing_course/)
+- Python (Jupyter Notebooks)
