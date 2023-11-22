@@ -338,6 +338,24 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
+      <li><a href="https://jupyter.isae-supaero.fr/hub/user-redirect/git-pull?repo=https%3A//github.com/SizingLab/sizing_course&urlpath=lab/tree/sizing_course/laboratories/Lab-vega/3-simulation_models.ipynb&branch=main" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+      
+      
+      
       <li><a href="https://colab.research.google.com/github/SizingLab/sizing_course/blob/main/laboratories/Lab-vega/3-simulation_models.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onColab"
@@ -351,24 +369,6 @@ const thebe_selector_output = ".output, .cell_output"
   </span>
 <span class="btn__text-container">Colab</span>
 </a>
-</li>
-      
-      
-      
-      
-      <li>
-<button onclick="initThebeSBT()"
-  class="btn btn-sm btn-launch-thebe dropdown-item"
-  title="Launch Thebe"
-  data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-play"></i>
-  </span>
-<span class="btn__text-container">Live Code</span>
-</button>
 </li>
       
   </ul>
@@ -797,7 +797,7 @@ with:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fca3178fbb0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f180e614f70&gt;
 </pre></div>
 </div>
 <img alt="../../_images/4c512d542587c886ec323a2a693a0c6b5f4710440dd9a13db26d01d5791431d0.png" src="../../_images/4c512d542587c886ec323a2a693a0c6b5f4710440dd9a13db26d01d5791431d0.png" />
@@ -810,8 +810,8 @@ with:</p>
     {
         requestKernel: true,
         binderOptions: {
-            repo: "SizingLab/sizing_course",
-            ref: "main",
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
         },
         codeMirrorConfig: {
             theme: "abcdef",

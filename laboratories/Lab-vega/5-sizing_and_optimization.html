@@ -338,6 +338,24 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
+      <li><a href="https://jupyter.isae-supaero.fr/hub/user-redirect/git-pull?repo=https%3A//github.com/SizingLab/sizing_course&urlpath=lab/tree/sizing_course/laboratories/Lab-vega/5-sizing_and_optimization.ipynb&branch=main" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+      
+      
+      
       <li><a href="https://colab.research.google.com/github/SizingLab/sizing_course/blob/main/laboratories/Lab-vega/5-sizing_and_optimization.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onColab"
@@ -351,24 +369,6 @@ const thebe_selector_output = ".output, .cell_output"
   </span>
 <span class="btn__text-container">Colab</span>
 </a>
-</li>
-      
-      
-      
-      
-      <li>
-<button onclick="initThebeSBT()"
-  class="btn btn-sm btn-launch-thebe dropdown-item"
-  title="Launch Thebe"
-  data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-play"></i>
-  </span>
-<span class="btn__text-container">Live Code</span>
-</button>
 </li>
       
   </ul>
@@ -935,7 +935,7 @@ Constraints (should be &gt;= 0):
      Length margin: actuator_length-stroke-L_nut-L_bearing-2*L_rod =  0.258
 -----------------------------------------------
 Calculation time:
- 0.016938447952270508 s
+ 0.018331289291381836 s
 </pre></div>
 </div>
 </div>
@@ -985,8 +985,8 @@ Design variables:
      d_2 =  0.20 m
 Performances:
      Stroke = 0.27 m
-     Max load = 35435 N
-     Stall load = 85461 N
+     Max load = 35445 N
+     Stall load = 85482 N
 Components characteristics:
      Lever arm = 1.35 m
      Actuator length = 0.81 m
@@ -995,16 +995,16 @@ Components characteristics:
      Rod-end mass = 2.80 kg
      Rod-end length = 0.06 m
      Screw mass = 4.81 kg
-     Nut mass = 5.98 kg
+     Nut mass = 5.99 kg
      Nut length = 0.12 m
      Bearing length = 0.04 m
 Constraints (should be &gt;= 0):
-     Speed margin: W_mot-reduction_ratio*max_speed/pitch= 241.010
+     Speed margin: W_mot-reduction_ratio*max_speed/pitch= 241.020
      Torque margin: T_mot_guess-T_mot_real= 0.000 
-     Length margin: actuator_length-stroke-L_nut-L_bearing-2*L_rod =  0.258
+     Length margin: actuator_length-stroke-L_nut-L_bearing-2*L_rod =  0.257
 -----------------------------------------------
 Calculation time:
- 0.48608875274658203 s
+ 0.5588788986206055 s
 </pre></div>
 </div>
 </div>
@@ -1016,8 +1016,8 @@ Calculation time:
     {
         requestKernel: true,
         binderOptions: {
-            repo: "SizingLab/sizing_course",
-            ref: "main",
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
         },
         codeMirrorConfig: {
             theme: "abcdef",

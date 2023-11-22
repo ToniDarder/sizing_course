@@ -338,6 +338,24 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
+      <li><a href="https://jupyter.isae-supaero.fr/hub/user-redirect/git-pull?repo=https%3A//github.com/SizingLab/sizing_course&urlpath=lab/tree/sizing_course/laboratories/Lab-vega/6-sizing_and_optimization_with_mdao_using_om.ipynb&branch=main" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+      
+      
+      
       <li><a href="https://colab.research.google.com/github/SizingLab/sizing_course/blob/main/laboratories/Lab-vega/6-sizing_and_optimization_with_mdao_using_om.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onColab"
@@ -351,24 +369,6 @@ const thebe_selector_output = ".output, .cell_output"
   </span>
 <span class="btn__text-container">Colab</span>
 </a>
-</li>
-      
-      
-      
-      
-      <li>
-<button onclick="initThebeSBT()"
-  class="btn btn-sm btn-launch-thebe dropdown-item"
-  title="Launch Thebe"
-  data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-play"></i>
-  </span>
-<span class="btn__text-container">Live Code</span>
-</button>
 </li>
       
   </ul>
@@ -1461,7 +1461,7 @@ Constraints (should be &gt;= 0):
      Speed margin: W_mot-reduction_ratio*max_speed/pitch= -0.000
      Length margin: actuator_length-stroke-L_nut-L_bearing-2*L_rod =  0.299
 Calculation time:
- 0.4759688377380371 s
+ 0.5186023712158203 s
 </pre></div>
 </div>
 </div>
@@ -1683,7 +1683,7 @@ Constraints (should be &gt;= 0):
      Torque margin: T_mot_guess-T_mot_real= 0.000 
      Length margin: actuator_length-stroke-L_nut-L_bearing-2*L_rod =  0.299
 Calculation time:
- 0.5173673629760742 s
+ 0.45127153396606445 s
 </pre></div>
 </div>
 </div>
@@ -1714,8 +1714,8 @@ Calculation time:
     {
         requestKernel: true,
         binderOptions: {
-            repo: "SizingLab/sizing_course",
-            ref: "main",
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
         },
         codeMirrorConfig: {
             theme: "abcdef",

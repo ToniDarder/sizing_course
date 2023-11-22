@@ -338,6 +338,24 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
+      <li><a href="https://jupyter.isae-supaero.fr/hub/user-redirect/git-pull?repo=https%3A//github.com/SizingLab/sizing_course&urlpath=lab/tree/sizing_course/laboratories/Lab-vega/1-sizing_scenarios.ipynb&branch=main" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onJupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+      
+      
+      
       <li><a href="https://colab.research.google.com/github/SizingLab/sizing_course/blob/main/laboratories/Lab-vega/1-sizing_scenarios.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onColab"
@@ -351,24 +369,6 @@ const thebe_selector_output = ".output, .cell_output"
   </span>
 <span class="btn__text-container">Colab</span>
 </a>
-</li>
-      
-      
-      
-      
-      <li>
-<button onclick="initThebeSBT()"
-  class="btn btn-sm btn-launch-thebe dropdown-item"
-  title="Launch Thebe"
-  data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-play"></i>
-  </span>
-<span class="btn__text-container">Live Code</span>
-</button>
 </li>
       
   </ul>
@@ -767,7 +767,7 @@ and the torque can be calculated with the simple equation:<br />
 <div class="cell_output docutils container">
 <img alt="../../_images/7c1c53e497ccb86fe986b3746a1ea1f88eb386dcf521d9105bcc5db8e8dacd2f.png" src="../../_images/7c1c53e497ccb86fe986b3746a1ea1f88eb386dcf521d9105bcc5db8e8dacd2f.png" />
 <img alt="../../_images/32f6e365b9092220f2fb3db99574c88969fff67e8246b8442213a9edef29afda.png" src="../../_images/32f6e365b9092220f2fb3db99574c88969fff67e8246b8442213a9edef29afda.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.plot.Plot at 0x7f235640b100&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;sympy.plotting.plot.Plot at 0x7fc4ff5a9580&gt;
 </pre></div>
 </div>
 </div>
@@ -979,8 +979,8 @@ with <span class="math notranslate nohighlight">\(\xi=0.7\)</span> and thus <spa
     {
         requestKernel: true,
         binderOptions: {
-            repo: "SizingLab/sizing_course",
-            ref: "main",
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
         },
         codeMirrorConfig: {
             theme: "abcdef",
