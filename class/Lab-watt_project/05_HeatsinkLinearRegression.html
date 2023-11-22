@@ -54,40 +54,6 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
-    <script kind="utterances">
-
-    var commentsRunWhenDOMLoaded = cb => {
-    if (document.readyState != 'loading') {
-        cb()
-    } else if (document.addEventListener) {
-        document.addEventListener('DOMContentLoaded', cb)
-    } else {
-        document.attachEvent('onreadystatechange', function() {
-        if (document.readyState == 'complete') cb()
-        })
-    }
-}
-
-var addUtterances = () => {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src = "https://utteranc.es/client.js";
-    script.async = "async";
-
-    script.setAttribute("repo", "SizingLab/sizing_course");
-    script.setAttribute("issue-term", "pathname");
-    script.setAttribute("theme", "github-light");
-    script.setAttribute("label", "💬 comment");
-    script.setAttribute("crossorigin", "anonymous");
-
-    sections = document.querySelectorAll("div.section");
-    if (sections !== null) {
-        section = sections[sections.length-1];
-        section.appendChild(script);
-    }
-}
-commentsRunWhenDOMLoaded(addUtterances);
-</script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -99,6 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'class/Lab-watt_project/05_HeatsinkLinearRegression';</script>
+    <link rel="shortcut icon" href="../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Sizing code of an inductor" href="06_SizingCodeInductor.html" />
@@ -201,14 +168,6 @@ const thebe_selector_output = ".output, .cell_output"
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        
-        <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1">
-                <a class="reference internal" href="../../about/homepage.html">
-                    Course Description
-                </a>
-            </li>
-        </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">About this course</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../about/syllabus.html">Instructors</a></li>
@@ -796,7 +755,7 @@ which gives <span class="math notranslate nohighlight">\(\beta=(X^tX)^{-1}X^tY\)
  [-0.35364883]]
 </pre></div>
 </div>
-<img alt="../../_images/866468c8c20262bf14baf33c0d63c58644364a880f0217999063828e11a5a341.png" src="../../_images/866468c8c20262bf14baf33c0d63c58644364a880f0217999063828e11a5a341.png" />
+<img alt="../../_images/bf1a002e05af92504ee4296f2c8ffd63e4ce1f80ad3cbeaa3afaad8c5ace9483.png" src="../../_images/bf1a002e05af92504ee4296f2c8ffd63e4ce1f80ad3cbeaa3afaad8c5ace9483.png" />
 </div>
 </div>
 </section>
@@ -831,10 +790,16 @@ the given thermal resistance data by the appropriate factor taken from the therm
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Parameters:  [ 1.60057829 -0.73345535]
-R2:  0.9991401923462344
-The estimation function is: Rth/Rth,150mm = 39.9.L^-0.73
-with L in mm
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">9</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">X</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">x</span><span class="p">)),</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">x</span><span class="p">))))</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">Y</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="mi">1</span><span class="p">))</span>
+<span class="ne">----&gt; </span><span class="mi">9</span> <span class="n">modelL</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">X</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="n">resultsL</span> <span class="o">=</span> <span class="n">modelL</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Parameters: &#39;</span><span class="p">,</span> <span class="n">resultsL</span><span class="o">.</span><span class="n">params</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;sm&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -865,8 +830,16 @@ thermal resistance in forced convection.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Parameters:  [ 1.60057829 -0.73345535]
-R2:  0.9991401923462344
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">80</span><span class="p">,</span><span class="mi">75</span><span class="p">,</span><span class="mi">70</span><span class="p">,</span><span class="mi">60</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">30</span><span class="p">]))</span> <span class="c1"># temperature rise</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.99</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">1.02</span><span class="p">,</span> <span class="mf">1.075</span><span class="p">,</span> <span class="mf">1.15</span><span class="p">,</span> <span class="mf">1.25</span><span class="p">,</span> <span class="mf">1.39</span><span class="p">]))</span> <span class="c1"># multiplication factor</span>
+<span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">model</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">X</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">results</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Parameters: &#39;</span><span class="p">,</span> <span class="n">results</span><span class="o">.</span><span class="n">params</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;sm&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1007,8 +980,8 @@ All heatsinks have the same length <em>L</em> = 150 mm. <em>Ml</em> corresponds 
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/65d1c9b8bef69f841f04bbdad6482cd71c06eddaec275ec37f1867e1b2001d94.png" src="../../_images/65d1c9b8bef69f841f04bbdad6482cd71c06eddaec275ec37f1867e1b2001d94.png" />
-<img alt="../../_images/a9d6af8b67327af53b607e48d6ccbccaa41af8f68c8a9a3020d188556bad1b2b.png" src="../../_images/a9d6af8b67327af53b607e48d6ccbccaa41af8f68c8a9a3020d188556bad1b2b.png" />
+<img alt="../../_images/8a980e17ae75e8a826613212cc5075a632f5ef8186a44453b9e9b955f735b492.png" src="../../_images/8a980e17ae75e8a826613212cc5075a632f5ef8186a44453b9e9b955f735b492.png" />
+<img alt="../../_images/d5135d8028da54907e8ff90c9f31a3c5d336fcf8f049f2b639e3980318549046.png" src="../../_images/d5135d8028da54907e8ff90c9f31a3c5d336fcf8f049f2b639e3980318549046.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1176,10 +1149,16 @@ All heatsinks have the same length <em>L</em> = 150 mm. <em>Ml</em> corresponds 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Parameters:  [ 2.685738   -0.91835926 -0.55758774]
-R2: 0.986
-The estimation function is: Rth,n = 485.W^-0.92.H^-0.56
-with Rth,n in [°/W], W,H in [mm] and L=150 mm
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">10</span><span class="p">],</span> <span class="n">line</span> <span class="mi">10</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">XHS</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">dHSlog</span><span class="p">[</span><span class="s1">&#39;W&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">)),</span> <span class="n">dHSlog</span><span class="p">[</span><span class="s1">&#39;W&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">dHSlog</span><span class="p">[</span><span class="s1">&#39;H&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">)))</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="c1"># OLS regression</span>
+<span class="ne">---&gt; </span><span class="mi">10</span> <span class="n">modelHS</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">YHS</span><span class="p">,</span> <span class="n">XHS</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="n">resultHS</span> <span class="o">=</span> <span class="n">modelHS</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="c1"># Results print</span>
+
+<span class="ne">NameError</span>: name &#39;sm&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1202,7 +1181,18 @@ with Rth,n in [°/W], W,H in [mm] and L=150 mm
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/2257d7dd244ac485acceac47394c827dca00301c9009e3884641f6d95cac62a2.png" src="../../_images/2257d7dd244ac485acceac47394c827dca00301c9009e3884641f6d95cac62a2.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">11</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Y vector prediction</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">y_HS</span><span class="o">=</span><span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="n">resultHS</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">XHS</span><span class="p">))</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># plot the data </span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1">#plt.plot(dHS[&#39;Rthn&#39;].values,dHS[&#39;Rthn&#39;].values, &#39;-&#39;,dHS[&#39;Rthn&#39;].values,y_HS, &#39;o&#39;)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">dHS</span><span class="p">[</span><span class="s1">&#39;Rthn&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span><span class="n">dHS</span><span class="p">[</span><span class="s1">&#39;Rthn&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;resultHS&#39; is not defined
+</pre></div>
+</div>
 </div>
 </div>
 </section>
@@ -1252,16 +1242,16 @@ with Rth,n in [°/W], W,H in [mm] and L=150 mm
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Parameters:  [ 2.17619395 -0.84842184 -0.62180147]
-R2: 0.975
-------------------
-The estimation function is: Rth,f = 1.500e+02.W^-0.85.H^-0.62
-with Rth,f in [°/W], W,H in [mm] and L=150 mm
-with R2: 0.975
-------------------
-The estimation function is: Ml = 2.632e-03.W^0.91.H^0.89
-with Ml in [kg/m], W,H in [mm]
-with R2: 0.986
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">12</span><span class="p">],</span> <span class="n">line</span> <span class="mi">7</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">YHS_f</span><span class="o">=</span><span class="n">dHSlog</span><span class="p">[</span><span class="s1">&#39;Rthf&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="c1"># OLS regression</span>
+<span class="ne">----&gt; </span><span class="mi">7</span> <span class="n">modelHS_f</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">YHS_f</span><span class="p">,</span> <span class="n">XHS</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">resultHS_f</span> <span class="o">=</span> <span class="n">modelHS_f</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Parameters: &#39;</span><span class="p">,</span> <span class="n">resultHS_f</span><span class="o">.</span><span class="n">params</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;sm&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1284,7 +1274,18 @@ with R2: 0.986
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/9829eb2116f5c6630f56f97fa4d24a5262a37243b8d272f4773e52926e8b9fbb.png" src="../../_images/9829eb2116f5c6630f56f97fa4d24a5262a37243b8d272f4773e52926e8b9fbb.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">13</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Y vector prediction</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">y_HSf</span><span class="o">=</span><span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="n">resultHS_f</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">XHS</span><span class="p">))</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># plot the data </span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1">#plt.plot(dHS[&#39;Rthn&#39;].values,dHS[&#39;Rthn&#39;].values, &#39;-&#39;,dHS[&#39;Rthn&#39;].values,y_HS, &#39;o&#39;)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">dHS</span><span class="p">[</span><span class="s1">&#39;Rthf&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span><span class="n">dHS</span><span class="p">[</span><span class="s1">&#39;Rthf&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;resultHS_f&#39; is not defined
+</pre></div>
+</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -1398,21 +1399,21 @@ By Marc Budinger, Scott Delbecq
   
   <div class="footer-item">
     
-  </div>
-  
-  <div class="footer-item">
+  <p class="copyright">
     
-  </div>
-  
-  <div class="footer-item">
+      © Copyright 2023.
+      <br/>
     
-<div class="extra_footer">
-  <div>
-<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
-    All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
-</div>
+  </p>
 
-</div>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
   </div>
   
 </div>

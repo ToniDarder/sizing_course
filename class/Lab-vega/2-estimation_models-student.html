@@ -54,40 +54,6 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
-    <script kind="utterances">
-
-    var commentsRunWhenDOMLoaded = cb => {
-    if (document.readyState != 'loading') {
-        cb()
-    } else if (document.addEventListener) {
-        document.addEventListener('DOMContentLoaded', cb)
-    } else {
-        document.attachEvent('onreadystatechange', function() {
-        if (document.readyState == 'complete') cb()
-        })
-    }
-}
-
-var addUtterances = () => {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src = "https://utteranc.es/client.js";
-    script.async = "async";
-
-    script.setAttribute("repo", "SizingLab/sizing_course");
-    script.setAttribute("issue-term", "pathname");
-    script.setAttribute("theme", "github-light");
-    script.setAttribute("label", "💬 comment");
-    script.setAttribute("crossorigin", "anonymous");
-
-    sections = document.querySelectorAll("div.section");
-    if (sections !== null) {
-        section = sections[sections.length-1];
-        section.appendChild(script);
-    }
-}
-commentsRunWhenDOMLoaded(addUtterances);
-</script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -99,6 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'class/Lab-vega/2-estimation_models-student';</script>
+    <link rel="shortcut icon" href="../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Estimation models with scaling laws and linear regression" href="2-estimation_models.html" />
@@ -201,14 +168,6 @@ const thebe_selector_output = ".output, .cell_output"
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        
-        <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1">
-                <a class="reference internal" href="../../about/homepage.html">
-                    Course Description
-                </a>
-            </li>
-        </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">About this course</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../about/syllabus.html">Instructors</a></li>
@@ -675,6 +634,112 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>d_</th>
+      <th>D</th>
+      <th>T</th>
+      <th>C</th>
+      <th>Co</th>
+      <th>Y0</th>
+      <th>Fa axial static</th>
+      <th>Pu</th>
+      <th>Wnom</th>
+      <th>Wmax</th>
+      <th>Mass</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>25</td>
+      <td>62</td>
+      <td>36.5</td>
+      <td>64.4</td>
+      <td>80</td>
+      <td>0.8</td>
+      <td>100</td>
+      <td>8.65</td>
+      <td>6000</td>
+      <td>11000</td>
+      <td>0.55</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>30</td>
+      <td>72</td>
+      <td>41.5</td>
+      <td>80.9</td>
+      <td>100</td>
+      <td>0.8</td>
+      <td>125</td>
+      <td>11.40</td>
+      <td>5300</td>
+      <td>9500</td>
+      <td>0.85</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>35</td>
+      <td>80</td>
+      <td>45.5</td>
+      <td>105.0</td>
+      <td>134</td>
+      <td>0.8</td>
+      <td>168</td>
+      <td>15.60</td>
+      <td>4500</td>
+      <td>8500</td>
+      <td>1.10</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>40</td>
+      <td>90</td>
+      <td>50.5</td>
+      <td>146.0</td>
+      <td>163</td>
+      <td>0.8</td>
+      <td>204</td>
+      <td>19.00</td>
+      <td>4500</td>
+      <td>7500</td>
+      <td>1.50</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>45</td>
+      <td>100</td>
+      <td>54.5</td>
+      <td>180.0</td>
+      <td>204</td>
+      <td>0.8</td>
+      <td>255</td>
+      <td>24.50</td>
+      <td>4000</td>
+      <td>6700</td>
+      <td>2.00</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>If we display these data in a scatter plot, we see that some components are not optimized in terms of axial effort.</p>
 <div class="cell docutils container">
@@ -690,6 +755,9 @@ document.write(`
 <span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/4586efd160fd50275865046ea846fb76bf1eb4309265e053e599ae4cad18b2b9.png" src="../../_images/4586efd160fd50275865046ea846fb76bf1eb4309265e053e599ae4cad18b2b9.png" />
 </div>
 </div>
 <p>It is interesting to clean this data in order to keep only the components representative of the problem considered. For this purpose, Pareto filtering is used where only dominant components are kept. A componant dominate another if the first is not inferior to the second in all selected objectives. Here the objective is small diameter and high maximum static force.</p>
@@ -727,6 +795,418 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>d_</th>
+      <th>D</th>
+      <th>T</th>
+      <th>C</th>
+      <th>Co</th>
+      <th>Y0</th>
+      <th>Fa axial static</th>
+      <th>Pu</th>
+      <th>Wnom</th>
+      <th>Wmax</th>
+      <th>Mass</th>
+      <th>Dominated</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>25</td>
+      <td>62</td>
+      <td>36.5</td>
+      <td>64.4</td>
+      <td>80</td>
+      <td>0.8</td>
+      <td>100</td>
+      <td>8.65</td>
+      <td>6000</td>
+      <td>11000</td>
+      <td>0.55</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>30</td>
+      <td>72</td>
+      <td>41.5</td>
+      <td>80.9</td>
+      <td>100</td>
+      <td>0.8</td>
+      <td>125</td>
+      <td>11.40</td>
+      <td>5300</td>
+      <td>9500</td>
+      <td>0.85</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>35</td>
+      <td>80</td>
+      <td>45.5</td>
+      <td>105.0</td>
+      <td>134</td>
+      <td>0.8</td>
+      <td>168</td>
+      <td>15.60</td>
+      <td>4500</td>
+      <td>8500</td>
+      <td>1.10</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>40</td>
+      <td>90</td>
+      <td>50.5</td>
+      <td>146.0</td>
+      <td>163</td>
+      <td>0.8</td>
+      <td>204</td>
+      <td>19.00</td>
+      <td>4500</td>
+      <td>7500</td>
+      <td>1.50</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>45</td>
+      <td>100</td>
+      <td>54.5</td>
+      <td>180.0</td>
+      <td>204</td>
+      <td>0.8</td>
+      <td>255</td>
+      <td>24.50</td>
+      <td>4000</td>
+      <td>6700</td>
+      <td>2.00</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>50</td>
+      <td>90</td>
+      <td>43.5</td>
+      <td>130.0</td>
+      <td>183</td>
+      <td>1.6</td>
+      <td>114</td>
+      <td>20.80</td>
+      <td>4500</td>
+      <td>7500</td>
+      <td>1.10</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>50</td>
+      <td>110</td>
+      <td>58.5</td>
+      <td>208.0</td>
+      <td>240</td>
+      <td>0.8</td>
+      <td>300</td>
+      <td>28.50</td>
+      <td>3600</td>
+      <td>6000</td>
+      <td>2.60</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>55</td>
+      <td>90</td>
+      <td>54.0</td>
+      <td>180.0</td>
+      <td>270</td>
+      <td>2.2</td>
+      <td>123</td>
+      <td>30.50</td>
+      <td>4500</td>
+      <td>7000</td>
+      <td>1.35</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>55</td>
+      <td>120</td>
+      <td>63.0</td>
+      <td>209.0</td>
+      <td>275</td>
+      <td>0.8</td>
+      <td>344</td>
+      <td>33.50</td>
+      <td>3000</td>
+      <td>5600</td>
+      <td>3.30</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>60</td>
+      <td>95</td>
+      <td>46.0</td>
+      <td>163.0</td>
+      <td>245</td>
+      <td>1.6</td>
+      <td>153</td>
+      <td>27.00</td>
+      <td>4300</td>
+      <td>6700</td>
+      <td>1.90</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>60</td>
+      <td>130</td>
+      <td>67.0</td>
+      <td>246.0</td>
+      <td>335</td>
+      <td>0.8</td>
+      <td>419</td>
+      <td>40.50</td>
+      <td>2800</td>
+      <td>5300</td>
+      <td>4.10</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>65</td>
+      <td>120</td>
+      <td>49.5</td>
+      <td>228.0</td>
+      <td>270</td>
+      <td>1.6</td>
+      <td>169</td>
+      <td>32.50</td>
+      <td>3600</td>
+      <td>5600</td>
+      <td>1.20</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>65</td>
+      <td>140</td>
+      <td>72.0</td>
+      <td>281.0</td>
+      <td>380</td>
+      <td>0.8</td>
+      <td>475</td>
+      <td>47.50</td>
+      <td>2600</td>
+      <td>4800</td>
+      <td>5.05</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>70</td>
+      <td>110</td>
+      <td>50.0</td>
+      <td>172.0</td>
+      <td>305</td>
+      <td>1.6</td>
+      <td>191</td>
+      <td>34.50</td>
+      <td>3400</td>
+      <td>5600</td>
+      <td>1.80</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>70</td>
+      <td>110</td>
+      <td>62.0</td>
+      <td>220.0</td>
+      <td>400</td>
+      <td>2.5</td>
+      <td>160</td>
+      <td>45.50</td>
+      <td>3400</td>
+      <td>5600</td>
+      <td>2.40</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>70</td>
+      <td>150</td>
+      <td>76.0</td>
+      <td>319.0</td>
+      <td>440</td>
+      <td>0.8</td>
+      <td>550</td>
+      <td>54.00</td>
+      <td>2400</td>
+      <td>4500</td>
+      <td>6.15</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>75</td>
+      <td>115</td>
+      <td>62.0</td>
+      <td>233.0</td>
+      <td>455</td>
+      <td>2.2</td>
+      <td>207</td>
+      <td>52.00</td>
+      <td>3200</td>
+      <td>5300</td>
+      <td>2.40</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>75</td>
+      <td>125</td>
+      <td>74.0</td>
+      <td>303.0</td>
+      <td>530</td>
+      <td>1.6</td>
+      <td>331</td>
+      <td>63.00</td>
+      <td>3000</td>
+      <td>5000</td>
+      <td>3.80</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>75</td>
+      <td>130</td>
+      <td>54.5</td>
+      <td>238.0</td>
+      <td>355</td>
+      <td>1.6</td>
+      <td>222</td>
+      <td>41.50</td>
+      <td>3000</td>
+      <td>5000</td>
+      <td>2.85</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>75</td>
+      <td>130</td>
+      <td>66.5</td>
+      <td>275.0</td>
+      <td>425</td>
+      <td>1.6</td>
+      <td>266</td>
+      <td>49.00</td>
+      <td>3000</td>
+      <td>5000</td>
+      <td>3.40</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>80</td>
+      <td>125</td>
+      <td>58.0</td>
+      <td>233.0</td>
+      <td>430</td>
+      <td>1.6</td>
+      <td>269</td>
+      <td>49.00</td>
+      <td>3000</td>
+      <td>5000</td>
+      <td>2.65</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>80</td>
+      <td>140</td>
+      <td>70.5</td>
+      <td>319.0</td>
+      <td>490</td>
+      <td>1.6</td>
+      <td>306</td>
+      <td>57.00</td>
+      <td>2800</td>
+      <td>4500</td>
+      <td>4.25</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>80</td>
+      <td>170</td>
+      <td>85.0</td>
+      <td>380.0</td>
+      <td>530</td>
+      <td>0.8</td>
+      <td>663</td>
+      <td>64.00</td>
+      <td>2200</td>
+      <td>4000</td>
+      <td>8.75</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>85</td>
+      <td>130</td>
+      <td>58.0</td>
+      <td>238.0</td>
+      <td>450</td>
+      <td>1.6</td>
+      <td>281</td>
+      <td>51.00</td>
+      <td>2800</td>
+      <td>4800</td>
+      <td>2.80</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>85</td>
+      <td>130</td>
+      <td>72.0</td>
+      <td>308.0</td>
+      <td>620</td>
+      <td>2.2</td>
+      <td>282</td>
+      <td>69.50</td>
+      <td>2800</td>
+      <td>4800</td>
+      <td>3.55</td>
+      <td>True</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>The Pareto front component are now ploted in red.</p>
 <div class="cell docutils container">
@@ -744,6 +1224,14 @@ document.write(`
 <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Axial maximal static force (kN)&quot;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;External diameter (mm)&quot;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+    <span class="n">df_filter</span> <span class="o">=</span>
+               <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
 </pre></div>
 </div>
 </div>
@@ -789,6 +1277,22 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">13</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">reg</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="c1"># Get the data :</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="c1"># - X inputs and Y outputs</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="c1"># - apply a log transformation in order</span>
+<span class="ne">---&gt; </span><span class="mi">13</span> <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">df_filter</span><span class="p">[</span><span class="s2">&quot;D&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">df_filter</span><span class="p">[</span><span class="s2">&quot;Fa axial static&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">17</span> <span class="c1"># Gives a new shape to an array without changing its data : transform data into array</span>
+
+<span class="ne">NameError</span>: name &#39;df_filter&#39; is not defined
+</pre></div>
+</div>
+</div>
 </div>
 <p>We can now compare the coefficients of linear regression with scaling laws:</p>
 <section id="exercice">
@@ -800,6 +1304,14 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The coefficient are:&quot;</span><span class="p">,</span> <span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The intercept is:&quot;</span><span class="p">,</span> <span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The estimation model is: F_axial_max = </span><span class="si">%.2e</span><span class="s2">.D^</span><span class="si">%.1f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The estimation model is: F_axial_max = </span><span class="si">%.2e</span><span class="s2">.D^</span><span class="si">%.1f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">)</span>
+                                                                 <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
 </pre></div>
 </div>
 </div>
@@ -825,10 +1337,49 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="n">line</span> <span class="mi">7</span>
+    <span class="n">Yscal</span> <span class="o">=</span>
+           <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">10</span> <span class="o">**</span> <span class="n">reg</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="mi">90</span><span class="p">)]])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NotFittedError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">9</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="mi">10</span> <span class="o">**</span> <span class="n">reg</span><span class="o">.</span><span class="n">predict</span><span class="p">([[</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="mi">90</span><span class="p">)]])</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/sklearn/linear_model/_base.py:386,</span> in <span class="ni">LinearModel.predict</span><span class="nt">(self, X)</span>
+<span class="g g-Whitespace">    </span><span class="mi">372</span> <span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">373</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">374</span><span class="sd">     Predict using the linear model.</span>
+<span class="g g-Whitespace">    </span><span class="mi">375</span><span class="sd"> </span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">    </span><span class="mi">384</span><span class="sd">         Returns predicted values.</span>
+<span class="g g-Whitespace">    </span><span class="mi">385</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">386</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_decision_function</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/sklearn/linear_model/_base.py:367,</span> in <span class="ni">LinearModel._decision_function</span><span class="nt">(self, X)</span>
+<span class="g g-Whitespace">    </span><span class="mi">366</span> <span class="k">def</span> <span class="nf">_decision_function</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">367</span>     <span class="n">check_is_fitted</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">369</span>     <span class="n">X</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_validate_data</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">accept_sparse</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;csr&quot;</span><span class="p">,</span> <span class="s2">&quot;csc&quot;</span><span class="p">,</span> <span class="s2">&quot;coo&quot;</span><span class="p">],</span> <span class="n">reset</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">370</span>     <span class="k">return</span> <span class="n">safe_sparse_dot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">coef_</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">dense_output</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">intercept_</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages/sklearn/utils/validation.py:1461,</span> in <span class="ni">check_is_fitted</span><span class="nt">(estimator, attributes, msg, all_or_any)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1458</span>     <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> is not an estimator instance.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">estimator</span><span class="p">))</span>
+<span class="g g-Whitespace">   </span><span class="mi">1460</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">_is_fitted</span><span class="p">(</span><span class="n">estimator</span><span class="p">,</span> <span class="n">attributes</span><span class="p">,</span> <span class="n">all_or_any</span><span class="p">):</span>
+<span class="ne">-&gt; </span><span class="mi">1461</span>     <span class="k">raise</span> <span class="n">NotFittedError</span><span class="p">(</span><span class="n">msg</span> <span class="o">%</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="nb">type</span><span class="p">(</span><span class="n">estimator</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="p">})</span>
+
+<span class="ne">NotFittedError</span>: This LinearRegression instance is not fitted yet. Call &#39;fit&#39; with appropriate arguments before using this estimator.
 </pre></div>
 </div>
 </div>
@@ -935,21 +1486,21 @@ By Marc Budinger, Scott Delbecq
   
   <div class="footer-item">
     
-  </div>
-  
-  <div class="footer-item">
+  <p class="copyright">
     
-  </div>
-  
-  <div class="footer-item">
+      © Copyright 2023.
+      <br/>
     
-<div class="extra_footer">
-  <div>
-<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
-    All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
-</div>
+  </p>
 
-</div>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
   </div>
   
 </div>

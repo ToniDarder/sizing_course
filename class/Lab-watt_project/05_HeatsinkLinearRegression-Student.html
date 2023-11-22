@@ -54,40 +54,6 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
-    <script kind="utterances">
-
-    var commentsRunWhenDOMLoaded = cb => {
-    if (document.readyState != 'loading') {
-        cb()
-    } else if (document.addEventListener) {
-        document.addEventListener('DOMContentLoaded', cb)
-    } else {
-        document.attachEvent('onreadystatechange', function() {
-        if (document.readyState == 'complete') cb()
-        })
-    }
-}
-
-var addUtterances = () => {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src = "https://utteranc.es/client.js";
-    script.async = "async";
-
-    script.setAttribute("repo", "SizingLab/sizing_course");
-    script.setAttribute("issue-term", "pathname");
-    script.setAttribute("theme", "github-light");
-    script.setAttribute("label", "💬 comment");
-    script.setAttribute("crossorigin", "anonymous");
-
-    sections = document.querySelectorAll("div.section");
-    if (sections !== null) {
-        section = sections[sections.length-1];
-        section.appendChild(script);
-    }
-}
-commentsRunWhenDOMLoaded(addUtterances);
-</script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -99,6 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'class/Lab-watt_project/05_HeatsinkLinearRegression-Student';</script>
+    <link rel="shortcut icon" href="../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Heatsink estimation models with simple and multiple linear regressions" href="05_HeatsinkLinearRegression.html" />
@@ -201,14 +168,6 @@ const thebe_selector_output = ".output, .cell_output"
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        
-        <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1">
-                <a class="reference internal" href="../../about/homepage.html">
-                    Course Description
-                </a>
-            </li>
-        </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">About this course</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../about/syllabus.html">Instructors</a></li>
@@ -768,6 +727,94 @@ y_{p}
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Rthn</th>
+      <th>Rthf</th>
+      <th>W</th>
+      <th>H</th>
+      <th>L</th>
+      <th>Wf</th>
+      <th>Df</th>
+      <th>Hs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>13.20</td>
+      <td>5.15</td>
+      <td>19.0</td>
+      <td>4.8</td>
+      <td>150</td>
+      <td>0.6</td>
+      <td>1.9</td>
+      <td>1.1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>11.37</td>
+      <td>3.82</td>
+      <td>19.0</td>
+      <td>6.0</td>
+      <td>150</td>
+      <td>0.8</td>
+      <td>2.3</td>
+      <td>1.1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.98</td>
+      <td>0.46</td>
+      <td>134.3</td>
+      <td>19.2</td>
+      <td>150</td>
+      <td>1.6</td>
+      <td>10.8</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>8.79</td>
+      <td>3.06</td>
+      <td>24.0</td>
+      <td>7.3</td>
+      <td>150</td>
+      <td>1.5</td>
+      <td>3.8</td>
+      <td>2.3</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>7.52</td>
+      <td>3.83</td>
+      <td>37.5</td>
+      <td>3.1</td>
+      <td>150</td>
+      <td>1.0</td>
+      <td>2.6</td>
+      <td>1.1</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <blockquote>
 <div><p>Exercice: By using a correlation analysis or a scatter matrix (here <a class="reference external" href="http://benalexkeen.com/correlation-in-python/">examples</a>), identify the most important dimensions among <span class="math notranslate nohighlight">\(W, H, L, W_f, H_f, H_s\)</span>.</p>
@@ -812,7 +859,7 @@ y_{p}
       <th>Rthn</th>
       <td>1.000000</td>
       <td>8.209009e-01</td>
-      <td>-0.547883</td>
+      <td>-5.478826e-01</td>
       <td>-4.802456e-01</td>
       <td>-3.165148e-01</td>
       <td>-4.778697e-01</td>
@@ -823,9 +870,9 @@ y_{p}
       <th>Rthf</th>
       <td>0.820901</td>
       <td>1.000000e+00</td>
-      <td>-0.605701</td>
+      <td>-6.057011e-01</td>
       <td>-5.583399e-01</td>
-      <td>-1.279035e-17</td>
+      <td>-5.116139e-17</td>
       <td>-5.479748e-01</td>
       <td>-5.231688e-01</td>
       <td>-6.306939e-01</td>
@@ -834,9 +881,9 @@ y_{p}
       <th>W</th>
       <td>-0.547883</td>
       <td>-6.057011e-01</td>
-      <td>1.000000</td>
+      <td>1.000000e+00</td>
       <td>1.690900e-01</td>
-      <td>0.000000e+00</td>
+      <td>6.672354e-17</td>
       <td>3.767281e-01</td>
       <td>4.783354e-01</td>
       <td>2.661124e-01</td>
@@ -845,9 +892,9 @@ y_{p}
       <th>H</th>
       <td>-0.480246</td>
       <td>-5.583399e-01</td>
-      <td>0.169090</td>
+      <td>1.690900e-01</td>
       <td>1.000000e+00</td>
-      <td>-4.420263e-18</td>
+      <td>-1.768105e-17</td>
       <td>5.042339e-01</td>
       <td>2.310279e-01</td>
       <td>7.317083e-01</td>
@@ -855,21 +902,21 @@ y_{p}
     <tr>
       <th>L</th>
       <td>-0.316515</td>
-      <td>-1.279035e-17</td>
-      <td>0.000000</td>
-      <td>-4.420263e-18</td>
+      <td>-5.116139e-17</td>
+      <td>6.672354e-17</td>
+      <td>-1.768105e-17</td>
       <td>1.000000e+00</td>
-      <td>-1.139859e-17</td>
-      <td>1.970126e-17</td>
-      <td>-9.426127e-19</td>
+      <td>4.331464e-17</td>
+      <td>2.623379e-16</td>
+      <td>1.531746e-16</td>
     </tr>
     <tr>
       <th>Wf</th>
       <td>-0.477870</td>
       <td>-5.479748e-01</td>
-      <td>0.376728</td>
+      <td>3.767281e-01</td>
       <td>5.042339e-01</td>
-      <td>-1.139859e-17</td>
+      <td>4.331464e-17</td>
       <td>1.000000e+00</td>
       <td>7.978588e-01</td>
       <td>5.282451e-01</td>
@@ -878,9 +925,9 @@ y_{p}
       <th>Df</th>
       <td>-0.478109</td>
       <td>-5.231688e-01</td>
-      <td>0.478335</td>
+      <td>4.783354e-01</td>
       <td>2.310279e-01</td>
-      <td>1.970126e-17</td>
+      <td>2.623379e-16</td>
       <td>7.978588e-01</td>
       <td>1.000000e+00</td>
       <td>3.624208e-01</td>
@@ -889,9 +936,9 @@ y_{p}
       <th>Hs</th>
       <td>-0.525415</td>
       <td>-6.306939e-01</td>
-      <td>0.266112</td>
+      <td>2.661124e-01</td>
       <td>7.317083e-01</td>
-      <td>-9.426127e-19</td>
+      <td>1.531746e-16</td>
       <td>5.282451e-01</td>
       <td>3.624208e-01</td>
       <td>1.000000e+00</td>
@@ -916,8 +963,8 @@ y_{p}
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/e065dc8168a971969e74eb5547f929b053d3b0f10474d38cb3142836033b56bf.png" src="../../_images/e065dc8168a971969e74eb5547f929b053d3b0f10474d38cb3142836033b56bf.png" />
-<img alt="../../_images/bbc20d5baac14ac9eed8b79476f4bd9ca55b27789b50bf242457ba233b1ec3c7.png" src="../../_images/bbc20d5baac14ac9eed8b79476f4bd9ca55b27789b50bf242457ba233b1ec3c7.png" />
+<img alt="../../_images/cf1cafaf71e6781d8f76ce6057b982e0396576a8d88812d892b03c2736636329.png" src="../../_images/cf1cafaf71e6781d8f76ce6057b982e0396576a8d88812d892b03c2736636329.png" />
+<img alt="../../_images/1a03bf22d4daf2fa14404c7de78eabbd2210304f3c92c40fdd1e6cfed904f9d3.png" src="../../_images/1a03bf22d4daf2fa14404c7de78eabbd2210304f3c92c40fdd1e6cfed904f9d3.png" />
 </div>
 </div>
 <hr class="docutils" />
@@ -979,10 +1026,16 @@ y_{p}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Parameters:  [ 4.27428462 -0.91835926 -0.55758774 -0.73      ]
-R2:  0.9881820015880768
-The estimation function is: Rthn = 1.88e+04.W^-0.92.H^-0.56.L^-0.73
-with Rthn in [°/W], W,H and L in [mm]
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="n">line</span> <span class="mi">13</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="n">XHS</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">dHSlog</span><span class="p">[</span><span class="s1">&#39;W&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">)),</span> <span class="n">dHSlog</span><span class="p">[</span><span class="s1">&#39;W&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">dHSlog</span><span class="p">[</span><span class="s1">&#39;H&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">dHSlog</span><span class="p">[</span><span class="s1">&#39;L&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">)))</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="c1"># OLS regression</span>
+<span class="ne">---&gt; </span><span class="mi">13</span> <span class="n">modelHS</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">YHS</span><span class="p">,</span> <span class="n">XHS</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">14</span> <span class="n">resultHS</span> <span class="o">=</span> <span class="n">modelHS</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="c1"># Results print</span>
+
+<span class="ne">NameError</span>: name &#39;sm&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1005,7 +1058,18 @@ with Rthn in [°/W], W,H and L in [mm]
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/f7853007ac469e03fb22989cc5b8ca71866f429231f4b74f7908d081b6bb2820.png" src="../../_images/f7853007ac469e03fb22989cc5b8ca71866f429231f4b74f7908d081b6bb2820.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">9</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Y vector prediction</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">y_HS</span><span class="o">=</span><span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="n">resultHS</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">XHS</span><span class="p">))</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># plot the data </span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1">#plt.plot(dHS[&#39;Rthn&#39;].values,dHS[&#39;Rthn&#39;].values, &#39;-&#39;,dHS[&#39;Rthn&#39;].values,y_HS, &#39;o&#39;)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">dHS</span><span class="p">[</span><span class="s1">&#39;Rthn&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span><span class="n">dHS</span><span class="p">[</span><span class="s1">&#39;Rthn&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;resultHS&#39; is not defined
+</pre></div>
+</div>
 </div>
 </div>
 </section>
@@ -1101,21 +1165,21 @@ By Marc Budinger, Scott Delbecq
   
   <div class="footer-item">
     
-  </div>
-  
-  <div class="footer-item">
+  <p class="copyright">
     
-  </div>
-  
-  <div class="footer-item">
+      © Copyright 2023.
+      <br/>
     
-<div class="extra_footer">
-  <div>
-<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
-    All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
-</div>
+  </p>
 
-</div>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
   </div>
   
 </div>
