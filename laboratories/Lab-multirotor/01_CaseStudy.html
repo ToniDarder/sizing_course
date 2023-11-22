@@ -532,7 +532,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <p><img alt="SizingLab" src="laboratories/Lab-multirotor/pictures/logo_sizinglab.png" /></a></p>
+  <a class="reference internal image-reference" href="../../_images/logo_sizinglab.png"><img alt="logo" class="align-left" src="../../_images/logo_sizinglab.png" style="width: 25%;" /></a>
 <section class="tex2jax_ignore mathjax_ignore" id="case-study-and-architecture-presentation">
 <h1>Case study and architecture presentation<a class="headerlink" href="#case-study-and-architecture-presentation" title="Permalink to this heading">#</a></h1>
 <p><em>Written by Marc Budinger (INSA Toulouse), Scott Delbecq (ISAE-SUPAERO) and Félix Pollet (ISAE-SUPAERO), Toulouse, France.</em></p>
@@ -540,11 +540,31 @@ document.write(`
 <section id="case-study-the-multirotor-unmanned-aerial-vehicles-uavs">
 <h2>Case study: the multirotor Unmanned Aerial Vehicles (UAVs)<a class="headerlink" href="#case-study-the-multirotor-unmanned-aerial-vehicles-uavs" title="Permalink to this heading">#</a></h2>
 <p>The multirotor concept is not new and dates back to the first works on helicopter. In the 1920s, George de Bothezat (United States, 1922) and Etienne Oehmichen (France, 1924) built helicopters with fours rotors at the end of intersecting beams. However, mechanical power transmission and control were relatively complex and bulky.</p>
-<p><img alt="Trulli" src="laboratories/Lab-multirotor/pictures/De_Bothezat_Flying_Octopus.jpg" /><figcaption align = "center"><b>Fig.1 - George de Bothezat prototype</b></figcaption></figure></p>
-<figure><img src="./pictures/helico_4_helices_etienne_oehmichen_1924.jpg" alt="Trulli" style="width:40%"><figcaption align = "center"><b>Fig.2 - Etienne Oehmichen prototype</b></figcaption></figure>
+<figure class="align-center" id="bothezat-prototype">
+<a class="reference internal image-reference" href="../../_images/De_Bothezat_Flying_Octopus.jpg"><img alt="George de Bothezat prototype" src="../../_images/De_Bothezat_Flying_Octopus.jpg" style="width: 75%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">George de Bothezat prototype</span><a class="headerlink" href="#bothezat-prototype" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="oehmichen-prototype">
+<a class="reference internal image-reference" href="../../_images/helico_4_helices_etienne_oehmichen_1924.jpg"><img alt="Etienne Oehmichen prototype" src="../../_images/helico_4_helices_etienne_oehmichen_1924.jpg" style="width: 75%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Etienne Oehmichen prototype</span><a class="headerlink" href="#oehmichen-prototype" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>During the last decade, technological innovations have significantly contributed to the development of smart and powerful multirotor UAVs: miniaturization and microelectronic with the integration of inertial sensors, increased computational power of control processors, new battery technologies with higher energy density, permanent magnet motors with higher torque density and high power densities electric-converters. Multirotors have become a reality, and the applications are numerous: precision agriculture, inspection of power lines, transportation of goods and medical supplies, etc. This aerial vehicle concept is found in a wide range of sizes and weights, allowing the transport of payloads from a few hundred grams to hundreds of kilograms.</p>
-<figure><img src="./pictures/drone-anafi-usa-parrot.png" alt="Trulli" style="width:20%"><figcaption align = "center"><b>Fig.3 - Parrot ANAFI USA</b></figcaption></figure>
-<figure><img src="./pictures/Ehang_216.jpg" alt="Trulli" style="width:30%"><figcaption align = "center"><b>Fig.4 - eHang 216</b></figcaption></figure>
+<figure class="align-center" id="parrot-anafi">
+<a class="reference internal image-reference" href="../../_images/drone-anafi-usa-parrot.png"><img alt="Parrot ANAFI USA" src="../../_images/drone-anafi-usa-parrot.png" style="width: 75%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Parrot ANAFI USA</span><a class="headerlink" href="#parrot-anafi" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="ehang-216">
+<a class="reference internal image-reference" href="../../_images/Ehang_216.jpg"><img alt="eHang 216" src="../../_images/Ehang_216.jpg" style="width: 75%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">eHang 216</span><a class="headerlink" href="#ehang-216" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>For those interested, you can find <a class="reference external" href="https://quadcopterarena.com/the-history-of-drones-and-quadcopters/">here</a> an introduction to the history of Unmanned Aerial Vehicles, the features of quadcopters and their applications.</p>
 </section>
 <section id="architecture-of-multirotor-uavs">
@@ -567,7 +587,12 @@ document.write(`
 <li><p>M. <strong>BATTERY</strong>: Lithium polymer (LiPo) batteries offer the best combination of energy density, power density, and lifetime on the market.</p></li>
 <li><p>N. <strong>BATTERY MONITOR</strong>: Provides in-flight power level monitoring to flight controller.</p></li>
 </ul>
-<figure><img src="./assets/images/anatomy-of-a-drone.png" alt="Trulli" style="width:30%"><figcaption align = "center"><b>Fig.5 - Anatonmy of a drone</b></figcaption></figure>
+<figure class="align-center" id="drone-anatomy">
+<a class="reference internal image-reference" href="../../_images/anatomy-of-a-drone.png"><img alt="Anatony of a drone" src="../../_images/anatomy-of-a-drone.png" style="width: 75%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Anatomy of a drone</span><a class="headerlink" href="#drone-anatomy" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>The load is often a camera system:</p>
 <ul class="simple">
 <li><p>O. <strong>GIMBAL</strong>: Pivoting mount that rotates about 1, 2, or 3 axes to provide stabilization and pointing of cameras or other sensors.</p></li>
@@ -575,15 +600,6 @@ document.write(`
 <li><p>Q. <strong>GIMBAL CONTROLLER</strong>: Allows control of direct-drive brushless gimbal motors as if they were standard hobby servos.</p></li>
 <li><p>R. <strong>CAMERA</strong>: GoPro or other compact HD video unit with onboard storage. Real-time streaming is possible with special equipment.</p></li>
 </ul>
-<figure class="align-center" id="myfigure">
-<img alt="Random image of the beach or ocean!" src="../../_images/anatomy-of-a-drone.png" />
-<figcaption>
-<p><span class="caption-number">Fig. 1 </span><span class="caption-text">width: 100%</span><a class="headerlink" href="#myfigure" title="Permalink to this image">#</a></p>
-<div class="legend">
-<p>Relaxing at the beach 🏝 🌊 😎</p>
-</div>
-</figcaption>
-</figure>
 </section>
 </section>
 
