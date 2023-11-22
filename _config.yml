@@ -10,10 +10,8 @@ bibtex_bibfiles:
   - references.bib
 
 execute:
-  execute_notebooks: cache
-  stderr_output: "remove"
+  execute_notebooks: force
   allow_errors: true
-  timeout: 120
 
 latex:
   latex_engine: xelatex
@@ -37,7 +35,6 @@ html:
 launch_buttons:
   notebook_interface : "jupyterlab"
   binderhub_url      : "https://mybinder.org"
-  jupyterhub_url     : "https://jupyter.isae-supaero.fr/"
   colab_url          : "https://colab.research.google.com"
 
 repository: 
