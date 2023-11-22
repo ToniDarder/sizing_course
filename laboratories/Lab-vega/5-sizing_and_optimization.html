@@ -260,7 +260,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../Lab-watt_project/09_SizingCodeDCDCconverter.html">Sizing code of a DC/DC converter</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Lab-multirotor/summary.html">Lab - Multirotor</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Lab-multirotor/summary.html">Lab - Multirotor</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Lab-multirotor/00_Introduction.html">Sizing of multi-rotor drones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lab-multirotor/01_CaseStudy.html">Case study and architecture presentation</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../Lab-elevator/summary.html">Lab - Elevator</a></li>
 </ul>
 
@@ -931,7 +935,7 @@ Constraints (should be &gt;= 0):
      Length margin: actuator_length-stroke-L_nut-L_bearing-2*L_rod =  0.258
 -----------------------------------------------
 Calculation time:
- 0.0195467472076416 s
+ 0.016938447952270508 s
 </pre></div>
 </div>
 </div>
@@ -977,30 +981,30 @@ Objective:
 Design variables:
      reduction_ratio =  1.29
      k_oversizing =  1.69
-     d_1 =  -0.31 m
+     d_1 =  -0.30 m
      d_2 =  0.20 m
 Performances:
      Stroke = 0.27 m
-     Max load = 35450 N
-     Stall load = 85503 N
+     Max load = 35435 N
+     Stall load = 85461 N
 Components characteristics:
      Lever arm = 1.35 m
      Actuator length = 0.81 m
      Motor mass = 22.22 kg
-     Max Tem = 105.17 N.m
+     Max Tem = 105.18 N.m
      Rod-end mass = 2.80 kg
      Rod-end length = 0.06 m
      Screw mass = 4.81 kg
-     Nut mass = 5.99 kg
+     Nut mass = 5.98 kg
      Nut length = 0.12 m
      Bearing length = 0.04 m
 Constraints (should be &gt;= 0):
-     Speed margin: W_mot-reduction_ratio*max_speed/pitch= 240.996
+     Speed margin: W_mot-reduction_ratio*max_speed/pitch= 241.010
      Torque margin: T_mot_guess-T_mot_real= 0.000 
-     Length margin: actuator_length-stroke-L_nut-L_bearing-2*L_rod =  0.257
+     Length margin: actuator_length-stroke-L_nut-L_bearing-2*L_rod =  0.258
 -----------------------------------------------
 Calculation time:
- 0.5167195796966553 s
+ 0.48608875274658203 s
 </pre></div>
 </div>
 </div>
