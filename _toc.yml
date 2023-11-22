@@ -9,21 +9,21 @@ parts:
   maxdepth: 2
   chapters:
   - file: classes/Lecture1/summary
-    title: Lecture 1 - Architecture, sizing scenarios and design drivers
+    title: Architectures, sizing scenarios and design drivers
     sections:
       - file: classes/Lecture1/1-objectives_and_ressources
       - file: classes/Lecture1/2-needs_and_general_methodology
       - file: classes/Lecture1/3-scenarios_and_design_drivers
       - file: classes/Lecture1/4-quizz
   - file: classes/Lecture2/summary
-    title: Lecture 2 - Estimation models
+    title: Estimation models
     sections:
       - file: classes/Lecture2/1-needs
       - file: classes/Lecture2/2-linear_regressions
       - file: classes/Lecture2/3-scaling_laws
       - file: classes/Lecture2/4-quizz
   - file: classes/Lecture4/summary
-    title: Lecture 3 - Simulation and evaluation models
+    title: Simulation and evaluation models
     sections:
       - file: classes/Lecture3/1-simulation_models
       - file: classes/Lecture3/2-simulation_model_examples
@@ -31,7 +31,7 @@ parts:
       - file: classes/Lecture3/4-evaluation_model_examples
       - file: classes/Lecture3/5-quizz
   - file: classes/Lecture3/summary
-    title: Lecture 4 - Optimal sizing procedures
+    title: Optimal sizing procedures
     sections:
       - file: classes/Lecture4/1-design_and_optimization_problems
       - file: classes/Lecture4/2-optimization_examples
@@ -39,7 +39,7 @@ parts:
       - file: classes/Lecture4/4-sizing_procedure_examples
       - file: classes/Lecture4/5-quizz
   - file: classes/Lecture5/summary
-    title: Lecture 5 - MDAO and surrogate models
+    title: MDAO and surrogate models
     sections:
       - file: classes/Lecture5/1-mdao
       - file: classes/Lecture5/2-mdao_examples
@@ -47,7 +47,7 @@ parts:
       - file: classes/Lecture5/4-surrogate_model_examples
       - file: classes/Lecture5/5-quizz
   - file: classes/Lecture6/summary
-    title: Lecture 6 - LCA and sustainable scenarios
+    title: LCA and sustainable scenarios
     sections:
       - file: classes/Lecture6/1-lca
       - file: classes/Lecture6/2-lca_examples
