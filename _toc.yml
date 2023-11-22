@@ -6,6 +6,8 @@ parts:
   - file: about/syllabus
 - caption: Lectures
   chapters:
+    numbered: true
+    maxdepth: 2
   - file: classes/Lecture1/summary
     title: Lecture 1 - Architecture, sizing scenarios and design drivers
     sections:

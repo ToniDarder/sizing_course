@@ -25,7 +25,7 @@ html:
   use_issues_button: true
   use_edit_page_button: true
   navbar_number_sections : true
-  announcement: "Welcome to this new course!"
+  # announcement: "Welcome to this new course!"
   # comments:
   #   hypothesis: false
   #   utterances:
@@ -44,9 +44,7 @@ repository:
 
 sphinx:
   config:
-
     html_show_copyright: true
-    html_extra_path: ['files']
     use_repository_button: true
     use_issues_button: true
     use_edit_page_button: true
