@@ -37,7 +37,7 @@ html:
 launch_buttons:
   notebook_interface : "jupyterlab"
   binderhub_url      : "https://mybinder.org"
-  thebe              : true
+  jupyterhub_url     : "https://jupyter.isae-supaero.fr/"
   colab_url          : "https://colab.research.google.com"
 
 repository: 
