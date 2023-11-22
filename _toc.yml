@@ -4,7 +4,7 @@ parts:
 - caption: About this course
   chapters:
   - file: about/syllabus
-- caption: Lectures
+- caption: Classes
   numbered: true
   maxdepth: 2
   chapters:
