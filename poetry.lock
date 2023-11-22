@@ -1780,6 +1780,24 @@ files = [
 jupyterlab-markup = ">=2.0.0"
 
 [[package]]
+name = "jupyterlab-myst"
+version = "2.1.0"
+description = "Use MyST in JupyterLab"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "jupyterlab_myst-2.1.0-py3-none-any.whl", hash = "sha256:b094113e746681e8ae7296ea45f55e84ecb66bb554dd7e5c015181b38110abd1"},
+    {file = "jupyterlab_myst-2.1.0.tar.gz", hash = "sha256:789e002b73922622a47a2e1e14b3482925aa27de5d73183efc2fd0a79d52c6be"},
+]
+
+[package.dependencies]
+jupyter-server = {version = ">=2.0.1,<3", markers = "platform_system != \"Emscripten\""}
+
+[package.extras]
+test = ["coverage", "pytest", "pytest-asyncio", "pytest-cov", "pytest-jupyter[server] (>=0.6.0)"]
+
+[[package]]
 name = "jupyterlab-pygments"
 version = "0.2.2"
 description = "Pygments theme using JupyterLab CSS variables"
@@ -4885,4 +4903,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8"
-content-hash = "1d4911a5febeb67b8341e2a44c1c1b843f65be1fd62f5243598c8c5f5a0fbe69"
+content-hash = "34eb4e74b0bd07c4f91ca21b24da0115729f26f84da8ef711b0c6d0591d49c1a"
