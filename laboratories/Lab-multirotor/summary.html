@@ -445,9 +445,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -463,17 +461,6 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#colab">Colab</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-hub">Jupyter Hub</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#binder">Binder</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#local">Local</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -489,51 +476,6 @@ document.write(`
 <p class="admonition-title">Warning</p>
 <p>This course is under construction…</p>
 </div>
-<p>The multirotor sizing and optimization project is available on this repository:
-<a class="github reference external" href="https://github.com/SizingLab/multirotor_sizing_isae_coa_2023_student_version">SizingLab/multirotor_sizing_isae_coa_2023_student_version</a></p>
-<section id="colab">
-<h2>Colab<a class="headerlink" href="#colab" title="Permalink to this heading">#</a></h2>
-<p>Open <a class="reference external" href="https://colab.research.google.com">Google Colab</a>, open a new notebook and clone the repository by running in a cell:</p>
-<p><code class="docutils literal notranslate"><span class="pre">!</span> <span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/SizingLab/multirotor_sizing_isae_coa_2023_student_version.git</span></code></p>
-<p>Then install the required dependencies by running in a cell:</p>
-<p><code class="docutils literal notranslate"><span class="pre">!pip</span> <span class="pre">install</span> <span class="pre">-r</span> <span class="pre">multirotor_sizing_isae_coa_2023_student_version/requirements.txt</span></code></p>
-</section>
-<section id="jupyter-hub">
-<h2>Jupyter Hub<a class="headerlink" href="#jupyter-hub" title="Permalink to this heading">#</a></h2>
-<p>Open <a class="reference external" href="https://jupyter.isae-supaero.fr">Jupyter Hub</a>, open a new terminal and clone the repository by running:</p>
-<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/SizingLab/multirotor_sizing_isae_coa_2023_student_version.git</span></code></p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>To cancel your local changes and update your project with the lastest version available on the repo you can run:</p>
-<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">reset</span> <span class="pre">--hard</span></code></p>
-<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">fetch</span></code></p>
-<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">pull</span></code></p>
-</div>
-<p>Then install the required dependencies by running:</p>
-<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-r</span> <span class="pre">multirotor_sizing_isae_coa_2023_student_version/requirements.txt</span></code></p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>To zip the folder you can open a terminal at the father directory of the project and run:</p>
-<p><code class="docutils literal notranslate"><span class="pre">zip</span> <span class="pre">-r</span> <span class="pre">my_projet.zip</span> <span class="pre">multirotor_sizing_isae_coa_2023_student_version</span></code></p>
-<p>You can then download the .zip from Jupyter Hub as a normal file.</p>
-</div>
-</section>
-<section id="binder">
-<h2>Binder<a class="headerlink" href="#binder" title="Permalink to this heading">#</a></h2>
-<p><a class="reference external" href="https://mybinder.org/v2/gh/SizingLab/multirotor_sizing_isae_coa_2023_student_version/HEAD"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
-</section>
-<section id="local">
-<h2>Local<a class="headerlink" href="#local" title="Permalink to this heading">#</a></h2>
-<p>Download the zip file from <a class="reference external" href="https://github.com/SizingLab/multirotor_sizing_isae_coa_2023_student_version">Github</a> and unzip it.
-Open a Anaconda Prompt terminal and <code class="docutils literal notranslate"><span class="pre">cd</span></code> to the recently unziped folder.</p>
-<p>You can then create a new conda environment by running:</p>
-<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">create</span> <span class="pre">-n</span> <span class="pre">multirotor</span> <span class="pre">python=3.8</span></code></p>
-<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">multirotor</span></code></p>
-<p>Then install required dependencies:
-<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-r</span> <span class="pre">requirements.txt</span></code></p>
-<p>Run jupyter lab:
-<code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">lab</span></code></p>
-</section>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -592,23 +534,6 @@ Open a Anaconda Prompt terminal and <code class="docutils literal notranslate"><
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#colab">Colab</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-hub">Jupyter Hub</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#binder">Binder</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#local">Local</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
