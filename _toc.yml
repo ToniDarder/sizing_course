@@ -57,8 +57,6 @@ parts:
       - file: classes/Lecture6/5-quizz
 
 - caption: Laboratories
-  numbered: true
-  maxdepth: 2
   chapters:
   - file: laboratories/Lab-multirotor/summary
     title: Multirotor UAV
