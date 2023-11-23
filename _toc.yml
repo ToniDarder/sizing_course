@@ -57,9 +57,18 @@ parts:
       - file: classes/Lecture6/5-quizz
 
 - caption: Laboratories
+  numbered: true
+  maxdepth: 2
   chapters:
+  - file: laboratories/Lab-multirotor/summary
+    title: Multirotor UAV
+    sections:
+      - file: laboratories/Lab-multirotor/00_Introduction
+      - file: laboratories/Lab-multirotor/01_CaseStudy
+      - file: laboratories/Lab-multirotor/02_SizingScenariosEquations-Student
+      - file: laboratories/Lab-multirotor/02_SizingScenariosEquations
   - file: laboratories/Lab-vega/summary
-    title: Lab - VEGA Launcher TVC EMA
+    title: VEGA Launcher TVC EMA
     sections:
       - file: laboratories/Lab-vega/1-sizing_scenarios-student
       - file: laboratories/Lab-vega/1-sizing_scenarios
@@ -74,7 +83,7 @@ parts:
       - file: laboratories/Lab-vega/6-sizing_and_optimization_with_mdao_using_om-student
       - file: laboratories/Lab-vega/6-sizing_and_optimization_with_mdao_using_om
   - file: laboratories/Lab-watt_project/summary
-    title: Lab - WATT system - DC/DC converter sizing
+    title: WATT system - DC/DC converter sizing
     sections:
       - file: laboratories/Lab-watt_project/01_CaseStudy
       - file: laboratories/Lab-watt_project/02_Architecture-Student
@@ -90,12 +99,5 @@ parts:
       - file: laboratories/Lab-watt_project/08_DCDC_converter_sizing_introduction-Student
       - file: laboratories/Lab-watt_project/08_DCDC_converter_sizing_introduction
       - file: laboratories/Lab-watt_project/09_SizingCodeDCDCconverter
-  - file: laboratories/Lab-multirotor/summary
-    title: Lab - Multirotor
-    sections:
-      - file: laboratories/Lab-multirotor/00_Introduction
-      - file: laboratories/Lab-multirotor/01_CaseStudy
-      - file: laboratories/Lab-multirotor/02_SizingScenariosEquations-Student
-      - file: laboratories/Lab-multirotor/02_SizingScenariosEquations
   - file: laboratories/Lab-elevator/summary
-    title: Lab - Elevator
+    title: Elevator

@@ -33,4 +33,5 @@ Design optimization of a multirotor UAV
 
 ## Tools:
 - Course website (https://sizinglab.github.io/sizing_course/)
+- Course Github repository (https://github.com/SizingLab/sizing_course)
 - Python (Jupyter Notebooks)
