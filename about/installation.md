@@ -51,7 +51,7 @@ Open a Anaconda Prompt terminal and `cd` to the recently unziped folder.
 
 You can then create a new conda environment by running:
 
-`conda create -n sizing_course python=3.8`
+`conda create -n sizing_course python=3.9`
 
 `conda activate sizing_course`
 
