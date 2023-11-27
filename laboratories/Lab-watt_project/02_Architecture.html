@@ -558,7 +558,7 @@ In operation the bus is powered by supercapacitors, it travels the necessary dis
 At each stop, the arm deploys and realizes in 10 seconds the transfer of energy between the super capacitors of the totem and the super capacitors onboard the bus.
 An adapted Lithium-ion battery pack is installed in the bus for cases of impossibility of connection and trips without passengers.</p>
 <p><em>Ultracapacitor Pack and Totem</em>
-<img alt="PositionPacks" src="https://raw.githubusercontent.com/SizingLab/sizing_course/main/class/Lab-watt_project/assets/images/PositionPacks.png" /></p>
+<img alt="PositionPacks" src="https://raw.githubusercontent.com/SizingLab/sizing_course/main/laboratories/Lab-watt_project/assets/images/PositionPacks.png" /></p>
 </section>
 <section id="ultracapacitors-modules-selection">
 <h2>Ultracapacitors modules selection<a class="headerlink" href="#ultracapacitors-modules-selection" title="Permalink to this heading">#</a></h2>
@@ -614,7 +614,7 @@ Total energy     : 2.9e+06 J
 </div>
 <p>We will take as ultra-capacitor reference  the following <a class="reference external" href="http://www.maxwell.com/products/ultracapacitors/125v-tran-modules">module</a> from <a class="reference external" href="http://www.maxwell.com">Maxwell Technologies</a>.</p>
 <p><em>Maxwell module characteristics</em>
-<img alt="MaxwellModule" src="https://raw.githubusercontent.com/SizingLab/sizing_course/main/class/Lab-watt_project/assets/images/MaxwellModule.png" /></p>
+<img alt="MaxwellModule" src="https://raw.githubusercontent.com/SizingLab/sizing_course/main/laboratories/Lab-watt_project/assets/images/MaxwellModule.png" /></p>
 <blockquote>
 <div><p>Exercice: Explain and calculate with python the minimum number of modules  assuming that the minimum operating voltage will be equal to <span class="math notranslate nohighlight">\(V_{max}/2\)</span>.</p>
 </div></blockquote>
@@ -647,12 +647,12 @@ Total energy     : 2.9e+06 J
 <p>We now assume that each ultracapacity module will be connected to the main DC bus of the bus by a dedicated DC / DC converter. This converter will be responsible for managing the charge and the discharge of the module. The rest of the work will try to size this DC/DC converter.
 We will represent first here the Work Breakdown Structure of the Watt system (bus) with the equipment (DC/DC converter) to be design.</p>
 <p>Remark: following diagrams have been developed with the <a class="reference external" href="https://mermaid.live">Mermaid live editor</a></p>
-<p><img alt="WBS" src="https://raw.githubusercontent.com/SizingLab/sizing_course/main/class/Lab-watt_project/assets/images/Mermaid_WBS.svg" /></p>
+<p><img alt="WBS" src="https://raw.githubusercontent.com/SizingLab/sizing_course/main/laboratories/Lab-watt_project/assets/images/Mermaid_WBS.svg" /></p>
 <p>The function of the DC/DC converter is to adapt the voltage between the DC bus and the ultracapacitor module. The following figures illustrates the main components of this converter.</p>
 <p><em>DC/DC converter components</em>
-<img alt="DCDCconverter_components" src="https://raw.githubusercontent.com/SizingLab/sizing_course/main/class/Lab-watt_project/assets/images/DCDCconverter_components.png" /></p>
+<img alt="DCDCconverter_components" src="https://raw.githubusercontent.com/SizingLab/sizing_course/main/laboratories/Lab-watt_project/assets/images/DCDCconverter_components.png" /></p>
 <p><em>DC/DC converter diagram</em>
-<img alt="DCDCconverter_diagram" src="https://raw.githubusercontent.com/SizingLab/sizing_course/main/class/Lab-watt_project/assets/images/DCDCconverter_diagram.png" /></p>
+<img alt="DCDCconverter_diagram" src="https://raw.githubusercontent.com/SizingLab/sizing_course/main/laboratories/Lab-watt_project/assets/images/DCDCconverter_diagram.png" /></p>
 <p>The inductor enables to limit the current ripple in the load (here the ultracapcitor). The capacitor enables to limite the ripple voltage on the DC bus.</p>
 </section>
 <section id="design-drivers">
@@ -665,7 +665,7 @@ We will represent first here the Work Breakdown Structure of the Watt system (bu
 <p>The component can also have imperfections which can increase the mechanical stresses on itself or other components.
 For example, the inertia of a electrical motor increases the torque this same motor has to deliver or can destroy mechanical component when a sudden stop occurs.</p>
 <p>We will complete the graph with possible sources of degradation of the components of the DC/DC converter.</p>
-<p><img alt="DesignDrivers" src="https://raw.githubusercontent.com/SizingLab/sizing_course/main/class/Lab-watt_project/assets/images/Mermaid_DesignDrivers.svg" /></p>
+<p><img alt="DesignDrivers" src="https://raw.githubusercontent.com/SizingLab/sizing_course/main/laboratories/Lab-watt_project/assets/images/Mermaid_DesignDrivers.svg" /></p>
 <section id="sizing-scenarios">
 <h3>Sizing scenarios<a class="headerlink" href="#sizing-scenarios" title="Permalink to this heading">#</a></h3>
 <p>We have listed the different degradation risks for our application. Now we have to find the system uses which can create this degradation risks.</p>
