@@ -43,6 +43,8 @@ repository:
   branch       : main
 
 sphinx:
+  extra_extensions:
+    - sphinx_exercise
   config:
     html_show_copyright: true
     use_repository_button: true
