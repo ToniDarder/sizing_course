@@ -705,8 +705,8 @@ with the parameters express in the following table.</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
 <span class="c1"># Read the .csv file with bearing data</span>
-<span class="n">path</span><span class="o">=</span><span class="s1">&#39;./assets/data/&#39;</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path</span><span class="o">+</span><span class="s1">&#39;APC_STATIC-data-all-props.csv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">)</span>
+<span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;./assets/data/&quot;</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="s2">&quot;APC_STATIC-data-all-props.csv&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;;&quot;</span><span class="p">)</span>
 <span class="c1"># Print the head (first lines of the file)</span>
 <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
@@ -865,7 +865,7 @@ with the parameters express in the following table.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Data Filtering</span>
-<span class="n">dfMR</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;TYPE&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;MR&#39;</span><span class="p">]</span>
+<span class="n">dfMR</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;TYPE&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;MR&quot;</span><span class="p">]</span>
 <span class="n">dfMR</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -1028,18 +1028,33 @@ for MR type which gives a blade tip speed of 135 m/s. The dark spots on the foll
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Keep only the component n°8</span>
-<span class="n">df8</span><span class="o">=</span><span class="n">dfMR</span><span class="p">[</span><span class="n">dfMR</span><span class="p">[</span><span class="s1">&#39;COMP&#39;</span><span class="p">]</span><span class="o">==</span><span class="mi">8</span><span class="p">]</span>
+<span class="n">df8</span> <span class="o">=</span> <span class="n">dfMR</span><span class="p">[</span><span class="n">dfMR</span><span class="p">[</span><span class="s2">&quot;COMP&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">8</span><span class="p">]</span>
 
 <span class="c1"># Extract forbidden ND product</span>
-<span class="n">df8ND</span><span class="o">=</span><span class="n">df8</span><span class="p">[</span><span class="n">df8</span><span class="p">[</span><span class="s1">&#39;N.D&#39;</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">105000</span><span class="p">]</span>
+<span class="n">df8ND</span> <span class="o">=</span> <span class="n">df8</span><span class="p">[</span><span class="n">df8</span><span class="p">[</span><span class="s2">&quot;N.D&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">105000</span><span class="p">]</span>
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="c1"># plot the data </span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df8</span><span class="p">[</span><span class="s1">&#39;RPM&#39;</span><span class="p">],</span><span class="n">df8</span><span class="p">[</span><span class="s1">&#39;Cp&#39;</span><span class="p">],</span> <span class="s1">&#39;bo&#39;</span><span class="p">,</span><span class="n">df8</span><span class="p">[</span><span class="s1">&#39;RPM&#39;</span><span class="p">],</span><span class="n">df8</span><span class="p">[</span><span class="s1">&#39;Ct&#39;</span><span class="p">],</span> <span class="s1">&#39;ro&#39;</span><span class="p">,)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df8ND</span><span class="p">[</span><span class="s1">&#39;RPM&#39;</span><span class="p">],</span><span class="n">df8ND</span><span class="p">[</span><span class="s1">&#39;Cp&#39;</span><span class="p">],</span> <span class="s1">&#39;ko&#39;</span><span class="p">,</span><span class="n">df8ND</span><span class="p">[</span><span class="s1">&#39;RPM&#39;</span><span class="p">],</span><span class="n">df8ND</span><span class="p">[</span><span class="s1">&#39;Ct&#39;</span><span class="p">],</span> <span class="s1">&#39;ko&#39;</span><span class="p">,)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Rotational Speed [RPM]&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Cp (blue) and Ct (red)&#39;</span><span class="p">)</span>
+
+<span class="c1"># plot the data</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">df8</span><span class="p">[</span><span class="s2">&quot;RPM&quot;</span><span class="p">],</span>
+    <span class="n">df8</span><span class="p">[</span><span class="s2">&quot;Cp&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;bo&quot;</span><span class="p">,</span>
+    <span class="n">df8</span><span class="p">[</span><span class="s2">&quot;RPM&quot;</span><span class="p">],</span>
+    <span class="n">df8</span><span class="p">[</span><span class="s2">&quot;Ct&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;ro&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">df8ND</span><span class="p">[</span><span class="s2">&quot;RPM&quot;</span><span class="p">],</span>
+    <span class="n">df8ND</span><span class="p">[</span><span class="s2">&quot;Cp&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;ko&quot;</span><span class="p">,</span>
+    <span class="n">df8ND</span><span class="p">[</span><span class="s2">&quot;RPM&quot;</span><span class="p">],</span>
+    <span class="n">df8ND</span><span class="p">[</span><span class="s2">&quot;Ct&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;ko&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Rotational Speed [RPM]&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Cp (blue) and Ct (red)&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
@@ -1061,7 +1076,7 @@ for MR type which gives a blade tip speed of 135 m/s. The dark spots on the foll
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Keep only operating points with ND&lt;105000</span>
-<span class="n">dfMRND</span><span class="o">=</span><span class="n">dfMR</span><span class="p">[</span><span class="n">dfMR</span><span class="p">[</span><span class="s1">&#39;N.D&#39;</span><span class="p">]</span><span class="o">&lt;</span><span class="mi">105000</span><span class="p">]</span>
+<span class="n">dfMRND</span> <span class="o">=</span> <span class="n">dfMR</span><span class="p">[</span><span class="n">dfMR</span><span class="p">[</span><span class="s2">&quot;N.D&quot;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">105000</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -1079,13 +1094,13 @@ for MR type which gives a blade tip speed of 135 m/s. The dark spots on the foll
 
 
 <span class="c1"># Data</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">df_MR_ND</span><span class="p">[</span><span class="s1">&#39;ANGLE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
-<span class="n">y_Ct</span> <span class="o">=</span> <span class="n">df_MR_ND</span><span class="p">[</span><span class="s1">&#39;Ct&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">df_MR_ND</span><span class="p">[</span><span class="s2">&quot;ANGLE&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+<span class="n">y_Ct</span> <span class="o">=</span> <span class="n">df_MR_ND</span><span class="p">[</span><span class="s2">&quot;Ct&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
 
 <span class="c1"># Matrix X and Y</span>
-<span class="n">X</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
-<span class="n">Y_Ct</span> <span class="o">=</span> <span class="n">y_Ct</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">Y_Ct</span> <span class="o">=</span> <span class="n">y_Ct</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
 <span class="c1"># Create a new object for the linear regression</span>
 <span class="n">reg_Ct</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()</span>
@@ -1096,19 +1111,19 @@ for MR type which gives a blade tip speed of 135 m/s. The dark spots on the foll
 <span class="c1"># Y vector prediction</span>
 <span class="n">Ct_est</span> <span class="o">=</span> <span class="n">reg_Ct</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 
-<span class="c1"># Ct Parameters </span>
+<span class="c1"># Ct Parameters</span>
 <span class="c1"># ----</span>
 <span class="n">coef</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">reg_Ct</span><span class="o">.</span><span class="n">coef_</span><span class="p">)</span>
 <span class="n">intercept</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">reg_Ct</span><span class="o">.</span><span class="n">intercept_</span><span class="p">)</span>
 <span class="n">r2</span> <span class="o">=</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">Y_Ct</span><span class="p">,</span> <span class="n">Ct_est</span><span class="p">)</span>
 
 
-<span class="c1"># Plot the data </span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">Y_Ct</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Reference data&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">Ct_est</span><span class="p">,</span> <span class="s1">&#39;-g&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Data prediction&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Pitch/Diameter  ratio&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Ct&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Comparison of reference data and regression&#39;</span><span class="p">)</span>
+<span class="c1"># Plot the data</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">Y_Ct</span><span class="p">,</span> <span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Reference data&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">Ct_est</span><span class="p">,</span> <span class="s2">&quot;-g&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Data prediction&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Pitch/Diameter  ratio&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Ct&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Comparison of reference data and regression&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -1123,8 +1138,8 @@ for MR type which gives a blade tip speed of 135 m/s. The dark spots on the foll
 <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">8</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="c1"># Data</span>
-<span class="ne">----&gt; </span><span class="mi">8</span> <span class="n">x</span> <span class="o">=</span> <span class="n">df_MR_ND</span><span class="p">[</span><span class="s1">&#39;ANGLE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="n">y_Ct</span> <span class="o">=</span> <span class="n">df_MR_ND</span><span class="p">[</span><span class="s1">&#39;Ct&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+<span class="ne">----&gt; </span><span class="mi">8</span> <span class="n">x</span> <span class="o">=</span> <span class="n">df_MR_ND</span><span class="p">[</span><span class="s2">&quot;ANGLE&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="n">y_Ct</span> <span class="o">=</span> <span class="n">df_MR_ND</span><span class="p">[</span><span class="s2">&quot;Ct&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
 <span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="c1"># Matrix X and Y</span>
 
 <span class="ne">NameError</span>: name &#39;df_MR_ND&#39; is not defined
