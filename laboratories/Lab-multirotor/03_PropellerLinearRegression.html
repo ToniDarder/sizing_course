@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/exercise.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -632,6 +633,86 @@ with the parameters express in the following table.</p>
 </tbody>
 </table>
 <p><strong>Remark</strong>: The dimension of a parameter <span class="math notranslate nohighlight">\(x\)</span> is function of dimensions L, M and T : <span class="math notranslate nohighlight">\([x]=M^aL^bT^c\)</span>.  The previous table gives the value of <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(b\)</span> and <span class="math notranslate nohighlight">\(c\)</span> for each parameter of the problem.</p>
+<div class="exercise admonition" id="exercice_pi">
+
+<p class="admonition-title"><span class="caption-number">Exercise 1 </span></p>
+<section id="exercise-content">
+<p>Complete the table with 4 dimensionless <span class="math notranslate nohighlight">\(\pi\)</span> numbers possible for the given problem. Explain the number of dimensionless number.</p>
+</section>
+</div>
+<div class="solution dropdown admonition" id="solution_pi">
+
+<p class="admonition-title">Solution to<a class="reference internal" href="#exercice_pi"> Exercise 1</a></p>
+<section id="solution-content">
+<p>Buckingham <span class="math notranslate nohighlight">\(\pi\)</span> theorem: 7 parameters - 3 dimensions = 4 dimensionless <span class="math notranslate nohighlight">\(\pi\)</span> numbers</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter</p></th>
+<th class="head"><p>M</p></th>
+<th class="head"><p>L</p></th>
+<th class="head"><p>T</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Thrust <span class="math notranslate nohighlight">\(T\)</span> [N]</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>-2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Mass volumic (Air) <span class="math notranslate nohighlight">\(\rho_{air}\)</span> [kg/m<span class="math notranslate nohighlight">\(^3\)</span>]</p></td>
+<td><p>1</p></td>
+<td><p>-3</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p>Rotational speed <span class="math notranslate nohighlight">\(n\)</span> [Hz]</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>-1</p></td>
+</tr>
+<tr class="row-odd"><td><p>Diameter <span class="math notranslate nohighlight">\(D\)</span> [m]</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p>Pitch <span class="math notranslate nohighlight">\(p\)</span> [m]</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Drone speed <span class="math notranslate nohighlight">\(V\)</span> [m/s]</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>-1</p></td>
+</tr>
+<tr class="row-even"><td><p>Bulk modulus (Air) <span class="math notranslate nohighlight">\(\beta_{air}\)</span> [Pa]</p></td>
+<td><p>1</p></td>
+<td><p>-1</p></td>
+<td><p>-2</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(C_t=\frac{F}{\rho n^2D^4}=\pi_0\)</span></p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\frac{Pitch}{D}=\pi_1\)</span></p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(J=\frac{V}{nD}=\pi_2\)</span></p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\frac{\rho n^2D^2}{\beta_{air}}=\pi_3\)</span></p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
 </section>
 <section id="effect-of-the-rotational-speed">
 <h3>Effect of the rotational speed<a class="headerlink" href="#effect-of-the-rotational-speed" title="Permalink to this heading">#</a></h3>
@@ -1067,6 +1148,13 @@ $<span class="math notranslate nohighlight">\(\frac{\rho n^2D^2}{\beta_{air}}=M_
 </div>
 </div>
 </div>
+<div class="exercise admonition" id="exercice_cp">
+
+<p class="admonition-title"><span class="caption-number">Exercise 2 </span></p>
+<section id="exercise-content">
+<p>Perform a linear regression of <span class="math notranslate nohighlight">\(C_p\)</span> data.</p>
+</section>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_Cp</span> <span class="o">=</span> <span class="n">df_MR_ND</span><span class="p">[</span><span class="s1">&#39;Cp&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
@@ -1179,10 +1267,16 @@ with the parameters express in the following table.</p>
 </tr>
 </tbody>
 </table>
+<div class="exercise admonition" id="ex1">
+
+<p class="admonition-title"><span class="caption-number">Exercise 3 </span></p>
+<section id="exercise-content">
 <p>and maybe you wish to add a figure</p>
 <figure class="align-default">
 <img alt="https://source.unsplash.com/random/400x200?beach,ocean" src="https://source.unsplash.com/random/400x200?beach,ocean" />
 </figure>
+</section>
+</div>
 </section>
 </section>
 </section>
