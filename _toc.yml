@@ -65,6 +65,8 @@ parts:
       - file: laboratories/Lab-multirotor/01_CaseStudy
       - file: laboratories/Lab-multirotor/02_SizingScenariosEquations-Student
       - file: laboratories/Lab-multirotor/02_SizingScenariosEquations
+      - file: laboratories/Lab-multirotor/03_PropellerLinearRegression-Student
+      - file: laboratories/Lab-multirotor/03_PropellerLinearRegression
   - file: laboratories/Lab-vega/summary
     title: VEGA Launcher TVC EMA
     sections:
