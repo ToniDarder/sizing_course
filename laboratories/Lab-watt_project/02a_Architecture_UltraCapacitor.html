@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Lab - Elevator case study &#8212; Sizing and optimization of mechatronic systems</title>
+    <title>Architecture of the converter and sizing scenarios &#8212; Sizing and optimization of mechatronic systems</title>
   
   
   
@@ -63,11 +63,14 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'laboratories/Lab-elevator/summary';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'laboratories/Lab-watt_project/02a_Architecture_UltraCapacitor';</script>
     <link rel="shortcut icon" href="../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="prev" title="Sizing code of a DC/DC converter" href="../Lab-watt_project/09_SizingCodeDCDCconverter.html" />
+    <link rel="next" title="Equations of sizing scenarios" href="03_SizingScenarios.html" />
+    <link rel="prev" title="Lab - Sustainable Mobility - Storage Systems &amp; DC/DC converter sizing" href="summary.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -245,23 +248,20 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../Lab-vega/6-sizing_and_optimization_with_mdao_using_om.html">Sizing procedure and optimization with OpenMDAO</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Lab-watt_project/summary.html">WATT system - DC/DC converter sizing</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Lab-watt_project/01_CaseStudy.html">Case study presentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Lab-watt_project/02_Architecture-Student.html">Architecture of the converter and sizing scenarios (Student version)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Lab-watt_project/02_Architecture.html">Architecture of the converter and sizing scenarios</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Lab-watt_project/03_SizingScenarios.html">Equations of sizing scenarios</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Lab-watt_project/04_ScalingLaws-Student.html">Estimation models with scaling laws and linear regression (Student version)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Lab-watt_project/04_ScalingLaws.html">Estimation models with scaling laws and linear regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Lab-watt_project/05_HeatsinkLinearRegression-Student.html">Heatsink  estimation models with simple and multiple linear regressions (Student version)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Lab-watt_project/05_HeatsinkLinearRegression.html">Heatsink  estimation models with simple and multiple linear regressions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Lab-watt_project/06_SizingCodeInductor.html">Sizing code of an inductor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Lab-watt_project/07_SizingCodeInductor-Surrogate-Student.html">Sizing code of an inductor with surrogate models</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Lab-watt_project/07_SizingCodeInductor-Surrogate.html">Sizing code of an inductor with surrogate models</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Lab-watt_project/08_DCDC_converter_sizing_introduction.html">Design graphs for the sizing a DC/DC converter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Lab-watt_project/09_SizingCodeDCDCconverter.html">Sizing code of a DC/DC converter</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="summary.html">Lab - Sustainable mobility - DC/DC converter sizing</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Architecture of the converter and sizing scenarios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_SizingScenarios.html">Equations of sizing scenarios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04_ScalingLaws-Student.html">Estimation models with scaling laws and linear regression (Student version)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04_ScalingLaws.html">Estimation models with scaling laws and linear regression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05_HeatsinkLinearRegression-Student.html">Heatsink  estimation models with simple and multiple linear regressions (Student version)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05_HeatsinkLinearRegression.html">Heatsink  estimation models with simple and multiple linear regressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06_SizingCodeInductor.html">Sizing code of an inductor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07_SizingCodeInductor-Surrogate-Student.html">Sizing code of an inductor with surrogate models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07_SizingCodeInductor-Surrogate.html">Sizing code of an inductor with surrogate models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08_DCDC_converter_sizing_introduction.html">Design graphs for the sizing a DC/DC converter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09_SizingCodeDCDCconverter.html">Sizing code of a DC/DC converter</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Elevator</a></li>
 </ul>
 
     </div>
@@ -308,6 +308,55 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/SizingLab/sizing_course/main?urlpath=lab/tree/laboratories/Lab-watt_project/02a_Architecture_UltraCapacitor.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/SizingLab/sizing_course/blob/main/laboratories/Lab-watt_project/02a_Architecture_UltraCapacitor.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -333,7 +382,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/SizingLab/sizing_course/edit/main/laboratories/Lab-elevator/summary.md" target="_blank"
+      <li><a href="https://github.com/SizingLab/sizing_course/edit/main/laboratories/Lab-watt_project/02a_Architecture_UltraCapacitor.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -350,7 +399,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/SizingLab/sizing_course/issues/new?title=Issue%20on%20page%20%2Flaboratories/Lab-elevator/summary.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/SizingLab/sizing_course/issues/new?title=Issue%20on%20page%20%2Flaboratories/Lab-watt_project/02a_Architecture_UltraCapacitor.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -380,7 +429,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/laboratories/Lab-elevator/summary.md" target="_blank"
+      <li><a href="../../_sources/laboratories/Lab-watt_project/02a_Architecture_UltraCapacitor.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -390,7 +439,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -449,7 +498,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -460,11 +511,25 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Lab - Elevator case study</h1>
+    <h1>Architecture of the converter and sizing scenarios</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#watt-system">Watt System</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ultracapacitors-modules-selection">Ultracapacitors modules selection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dc-dc-converter-architecture">DC/DC converter architecture</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#design-drivers">Design drivers</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sizing-scenarios">Sizing scenarios</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -474,12 +539,143 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="lab-elevator-case-study">
-<span id="page-lab-elevator"></span><h1>Lab - Elevator case study<a class="headerlink" href="#lab-elevator-case-study" title="Permalink to this heading">#</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This course is under construction…</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="architecture-of-the-converter-and-sizing-scenarios">
+<h1>Architecture of the converter and sizing scenarios<a class="headerlink" href="#architecture-of-the-converter-and-sizing-scenarios" title="Permalink to this heading">#</a></h1>
+<p><em>Written by Marc Budinger, INSA Toulouse, France</em></p>
+<p>Before sizing a system, it is important to define all the constraints that could have an influence on the design. It is therefore advisable to list meticulously:</p>
+<ul class="simple">
+<li><p>the power components to size in the architecture</p></li>
+<li><p>criteria and parameters useful for the selection of components</p></li>
+<li><p>system usage scenarios that can “activate” these sizing scenarios</p></li>
+</ul>
+<section id="watt-system">
+<h2>Watt System<a class="headerlink" href="#watt-system" title="Permalink to this heading">#</a></h2>
+<p>The <a class="reference external" href="http://www.pvi.fr/wattsystem-watt-system,172.html">WATT system</a> includes:</p>
+<ul class="simple">
+<li><p>In the bus: a battery pack and a ultra capacitors pack associated with an electric power train, a connection system, an automatic arm, installed on the roof of the vehicle</p></li>
+<li><p>On the sidewalk: a charging station or “totem” with the connection, as well as a pack of super capacitors, all integrated in the urban landscape.</p></li>
+</ul>
+<p>Each totem (or charging station) is connected to the household electricity distribution network and allows charging between the passage of each bus. There is no need for specific equipment (substation, transformer).
+In operation the bus is powered by supercapacitors, it travels the necessary distance to the next stop, thanks to the energy stored.
+At each stop, the arm deploys and realizes in 10 seconds the transfer of energy between the super capacitors of the totem and the super capacitors onboard the bus.
+An adapted Lithium-ion battery pack is installed in the bus for cases of impossibility of connection and trips without passengers.</p>
+<p><em>Ultracapacitor Pack and Totem</em>
+<img alt="PositionPacks" src="https://raw.githubusercontent.com/SizingLab/sizing_course/main/laboratories/Lab-watt_project/assets/images/PositionPacks.png" /></p>
+</section>
+<section id="ultracapacitors-modules-selection">
+<h2>Ultracapacitors modules selection<a class="headerlink" href="#ultracapacitors-modules-selection" title="Permalink to this heading">#</a></h2>
+<p>In order to estimate the dimensions of the ultracapacities pack, we will be interested in the energy to be supplied to the motorization of the bus on a typical path:</p>
+<ul class="simple">
+<li><p>top speed <span class="math notranslate nohighlight">\(v_{max}\)</span> = 30 km/h</p></li>
+<li><p>distance between 2 totems <span class="math notranslate nohighlight">\(d\)</span> = 800 m</p></li>
+<li><p>maximum height difference <span class="math notranslate nohighlight">\(h\)</span> = 3 m</p></li>
+</ul>
+<p>The bus has the following characteristics:</p>
+<ul class="simple">
+<li><p>mass with passengers <span class="math notranslate nohighlight">\(m\)</span> = 20 t</p></li>
+<li><p><a class="reference external" href="http://en.wikipedia.org/wiki/Rolling_resistance">Rolling coefficient</a> tires <span class="math notranslate nohighlight">\(C_{rr} = 0.01\)</span></p></li>
+</ul>
+<p>Aerodynamic effect are assume here to be negligeable dur to low speed of the bus.</p>
+<blockquote>
+<div><p>Exercice: Complete this notebook with the equations enabling to calculate the maximum energy to supply (and to store) to the electrical power train. Use for that markdown (<a class="reference external" href="https://www.markdowntutorial.com/">here</a> a markdown tutorial and <a class="reference external" href="https://guides.github.com/features/mastering-markdown/">here</a> a quick introduction) and Latex notation (between “$”).</p>
+</div></blockquote>
+<blockquote>
+<div><p>Exercice: Calculate (with python) the maximum energy to supply (and to store) to the electrical power train.</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Parameters</span>
+<span class="n">v_max</span><span class="o">=</span><span class="mi">30</span><span class="o">*</span><span class="mi">1000</span><span class="o">/</span><span class="mi">3600</span> <span class="c1"># [m/s] max speed</span>
+<span class="n">m</span><span class="o">=</span><span class="mf">20e3</span> <span class="c1"># [kg] bus mass</span>
+<span class="n">d</span><span class="o">=</span><span class="mf">800.</span> <span class="c1"># [m] distance</span>
+<span class="n">h</span><span class="o">=</span><span class="mf">3.</span> <span class="c1"># [m] rise height</span>
+<span class="n">C_rr</span><span class="o">=</span> <span class="mf">0.01</span> <span class="c1"># [-] tyre rolling coef</span>
+<span class="n">g</span><span class="o">=</span><span class="mf">9.81</span> <span class="c1"># [m/s²] gravity acceleration</span>
+
+<span class="c1"># Energies &amp; works calculations</span>
+<span class="n">E_k</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="o">*</span><span class="n">m</span><span class="o">*</span><span class="n">v_max</span><span class="o">**</span><span class="mi">2</span> <span class="c1"># [J] kinetic energy</span>
+<span class="n">E_g</span><span class="o">=</span><span class="n">m</span><span class="o">*</span><span class="n">h</span><span class="o">*</span><span class="n">g</span> <span class="c1"># [J] potential gravity energy</span>
+<span class="n">W_r</span><span class="o">=</span><span class="n">m</span><span class="o">*</span><span class="n">g</span><span class="o">*</span><span class="n">C_rr</span><span class="o">*</span><span class="n">d</span> <span class="c1"># [J] friction work of rolling coef</span>
+<span class="n">E_t</span><span class="o">=</span><span class="n">E_k</span><span class="o">+</span><span class="n">E_g</span><span class="o">+</span><span class="n">W_r</span> <span class="c1"># [J] Total energy for 1 travel</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Kinetic energy   : </span><span class="si">%.2g</span><span class="s2"> J&quot;</span><span class="o">%</span><span class="k">E_k</span>)
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Potential energy : </span><span class="si">%.2g</span><span class="s2"> J&quot;</span><span class="o">%</span><span class="k">E_g</span>)
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Friction work    : </span><span class="si">%.2g</span><span class="s2"> J&quot;</span><span class="o">%</span><span class="k">W_r</span>)
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Total energy     : </span><span class="si">%.2g</span><span class="s2"> J&quot;</span><span class="o">%</span><span class="p">(</span><span class="n">E_t</span><span class="p">))</span>
+</pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Kinetic energy   : 6.9e+05 J
+Potential energy : 5.9e+05 J
+Friction work    : 1.6e+06 J
+Total energy     : 2.9e+06 J
+</pre></div>
+</div>
+</div>
+</div>
+<p>We will take as ultra-capacitor reference  the following <a class="reference external" href="http://www.maxwell.com/products/ultracapacitors/125v-tran-modules">module</a> from <a class="reference external" href="http://www.maxwell.com">Maxwell Technologies</a>.</p>
+<p><em>Maxwell module characteristics</em>
+<img alt="MaxwellModule" src="https://raw.githubusercontent.com/SizingLab/sizing_course/main/laboratories/Lab-watt_project/assets/images/MaxwellModule.png" /></p>
+<blockquote>
+<div><p>Exercice: Explain and calculate with python the minimum number of modules  assuming that the minimum operating voltage will be equal to <span class="math notranslate nohighlight">\(V_{max}/2\)</span>.</p>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+
+<span class="c1"># Maxwell module characteristics</span>
+<span class="n">V_max</span><span class="o">=</span><span class="mf">125.</span> <span class="c1"># [V] Max voltage</span>
+<span class="n">C</span><span class="o">=</span><span class="mf">63.</span> <span class="c1"># [F] Module capacitance</span>
+
+<span class="c1"># Modules number calculation</span>
+<span class="n">V_min</span><span class="o">=</span><span class="n">V_max</span><span class="o">/</span><span class="mi">2</span>
+<span class="n">E_1mod</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="o">*</span><span class="n">C</span><span class="o">*</span><span class="p">(</span><span class="n">V_max</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="n">V_min</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">N_mod</span><span class="o">=</span><span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">E_t</span><span class="o">/</span><span class="n">E_1mod</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Number of 125 V - 63 F modules :&quot;</span><span class="p">,</span><span class="n">N_mod</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of 125 V - 63 F modules : 8
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="dc-dc-converter-architecture">
+<h2>DC/DC converter architecture<a class="headerlink" href="#dc-dc-converter-architecture" title="Permalink to this heading">#</a></h2>
+<p>We now assume that each ultracapacity module will be connected to the main DC bus of the bus by a dedicated DC / DC converter. This converter will be responsible for managing the charge and the discharge of the module. The rest of the work will try to size this DC/DC converter.
+We will represent first here the Work Breakdown Structure of the Watt system (bus) with the equipment (DC/DC converter) to be design.</p>
+<p>Remark: following diagrams have been developed with the <a class="reference external" href="https://mermaid.live">Mermaid live editor</a></p>
+<p><img alt="WBS" src="https://raw.githubusercontent.com/SizingLab/sizing_course/main/laboratories/Lab-watt_project/assets/images/Mermaid_WBS.svg" /></p>
+<p>The function of the DC/DC converter is to adapt the voltage between the DC bus and the ultracapacitor module. The following figures illustrates the main components of this converter.</p>
+<p><em>DC/DC converter components</em>
+<img alt="DCDCconverter_components" src="https://raw.githubusercontent.com/SizingLab/sizing_course/main/laboratories/Lab-watt_project/assets/images/DCDCconverter_components.png" /></p>
+<p><em>DC/DC converter diagram</em>
+<img alt="DCDCconverter_diagram" src="https://raw.githubusercontent.com/SizingLab/sizing_course/main/laboratories/Lab-watt_project/assets/images/DCDCconverter_diagram.png" /></p>
+<p>The inductor enables to limit the current ripple in the load (here the ultracapcitor). The capacitor enables to limite the ripple voltage on the DC bus.</p>
+</section>
+<section id="design-drivers">
+<h2>Design drivers<a class="headerlink" href="#design-drivers" title="Permalink to this heading">#</a></h2>
+<p>We are going to determine here the possible reasons of the degradation in system’s components. These degration can be:</p>
+<ul class="simple">
+<li><p>Fast and come from transient power demands (such as permanent deformation, rupture for mechanical components)</p></li>
+<li><p>Gradual and come from continuous power demands which often reduce the component’s and therefore the system’s lifetime (such as mechanical fatigue for mechanical components)</p></li>
+</ul>
+<p>The component can also have imperfections which can increase the mechanical stresses on itself or other components.
+For example, the inertia of a electrical motor increases the torque this same motor has to deliver or can destroy mechanical component when a sudden stop occurs.</p>
+<p>We will complete the graph with possible sources of degradation of the components of the DC/DC converter.</p>
+<p><img alt="DesignDrivers" src="https://raw.githubusercontent.com/SizingLab/sizing_course/main/laboratories/Lab-watt_project/assets/images/Mermaid_DesignDrivers.svg" /></p>
+<section id="sizing-scenarios">
+<h3>Sizing scenarios<a class="headerlink" href="#sizing-scenarios" title="Permalink to this heading">#</a></h3>
+<p>We have listed the different degradation risks for our application. Now we have to find the system uses which can create this degradation risks.</p>
+<blockquote>
+<div><p>Exercice: Propose sizing scenarios for the different DC/DC converter components.</p>
+</div></blockquote>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -495,7 +691,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./laboratories/Lab-elevator"
+            path: "./laboratories/Lab-watt_project"
         },
         predefinedOutput: true
     }
@@ -513,13 +709,22 @@ document.write(`
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../Lab-watt_project/09_SizingCodeDCDCconverter.html"
+       href="summary.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Sizing code of a DC/DC converter</p>
+        <p class="prev-next-title">Lab - Sustainable Mobility - Storage Systems &amp; DC/DC converter sizing</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="03_SizingScenarios.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Equations of sizing scenarios</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -527,6 +732,26 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#watt-system">Watt System</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ultracapacitors-modules-selection">Ultracapacitors modules selection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dc-dc-converter-architecture">DC/DC converter architecture</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#design-drivers">Design drivers</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sizing-scenarios">Sizing scenarios</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
