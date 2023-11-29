@@ -1170,9 +1170,9 @@ $<span class="math notranslate nohighlight">\(\frac{\rho n^2D^2}{\beta_{air}}=M_
 
 <span class="c1"># Cp Parameters</span>
 <span class="c1"># -----</span>
-<span class="n">coef</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">reg_Ct</span><span class="o">.</span><span class="n">coef_</span><span class="p">)</span>
-<span class="n">intercept</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">reg_Ct</span><span class="o">.</span><span class="n">intercept_</span><span class="p">)</span>
-<span class="n">r2</span> <span class="o">=</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">Y_Ct</span><span class="p">,</span> <span class="n">Ct_est</span><span class="p">)</span>
+<span class="n">coef</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">reg_Cp</span><span class="o">.</span><span class="n">coef_</span><span class="p">)</span>
+<span class="n">intercept</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">reg_Cp</span><span class="o">.</span><span class="n">intercept_</span><span class="p">)</span>
+<span class="n">r2</span> <span class="o">=</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">Y_Cp</span><span class="p">,</span> <span class="n">Cp_est</span><span class="p">)</span>
 
 
 <span class="c1"># Plot the data</span>
@@ -1191,7 +1191,7 @@ $<span class="math notranslate nohighlight">\(\frac{\rho n^2D^2}{\beta_{air}}=M_
 </div>
 <div class="cell_output docutils container">
 <img alt="../../_images/90a97923bd8b4e640f31369c643eccdc20a5cab931c5cd50c127ae1ab49e5078.png" src="../../_images/90a97923bd8b4e640f31369c643eccdc20a5cab931c5cd50c127ae1ab49e5078.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Cp estimation model : Cp = 0.04 + 0.14 * p/D with R2=0.895
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Cp estimation model : Cp = -0.00 + 0.10 * p/D with R2=0.798
 </pre></div>
 </div>
 </div>
