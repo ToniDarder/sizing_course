@@ -535,7 +535,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <a class="reference internal image-reference" href="../../_images/logo_sizinglab.png"><img alt="logo" class="align-left" src="../../_images/logo_sizinglab.png" style="width: 25%;" /></a>
+  <a class="reference internal image-reference" href="https://raw.githubusercontent.com/SizingLab/sizing_course/main/laboratories/Lab-multirotor/assets/images/logo_sizinglab.png"><img alt="logo" class="align-left" src="https://raw.githubusercontent.com/SizingLab/sizing_course/main/laboratories/Lab-multirotor/assets/images/logo_sizinglab.png" style="width: 25%;" /></a>
 <section class="tex2jax_ignore mathjax_ignore" id="case-study-and-architecture-presentation">
 <h1>Case study and architecture presentation<a class="headerlink" href="#case-study-and-architecture-presentation" title="Permalink to this heading">#</a></h1>
 <p><em>Written by Marc Budinger (INSA Toulouse), Scott Delbecq (ISAE-SUPAERO) and Félix Pollet (ISAE-SUPAERO), Toulouse, France.</em></p>
@@ -544,26 +544,26 @@ document.write(`
 <h2>Case study: the multirotor Unmanned Aerial Vehicles (UAVs)<a class="headerlink" href="#case-study-the-multirotor-unmanned-aerial-vehicles-uavs" title="Permalink to this heading">#</a></h2>
 <p>The multirotor concept is not new and dates back to the first works on helicopter. In the 1920s, George de Bothezat (United States, 1922) and Etienne Oehmichen (France, 1924) built helicopters with fours rotors at the end of intersecting beams. However, mechanical power transmission and control were relatively complex and bulky.</p>
 <figure class="align-center" id="bothezat-prototype">
-<a class="reference internal image-reference" href="../../_images/De_Bothezat_Flying_Octopus.jpg"><img alt="George de Bothezat prototype" src="../../_images/De_Bothezat_Flying_Octopus.jpg" style="width: 75%;" /></a>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/SizingLab/sizing_course/main/laboratories/Lab-multirotor/assets/images/De_Bothezat_Flying_Octopus.jpg"><img alt="George de Bothezat prototype" src="https://raw.githubusercontent.com/SizingLab/sizing_course/main/laboratories/Lab-multirotor/assets/images/De_Bothezat_Flying_Octopus.jpg" style="width: 75%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 1 </span><span class="caption-text">George de Bothezat prototype</span><a class="headerlink" href="#bothezat-prototype" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-center" id="oehmichen-prototype">
-<a class="reference internal image-reference" href="../../_images/helico_4_helices_etienne_oehmichen_1924.jpg"><img alt="Etienne Oehmichen prototype" src="../../_images/helico_4_helices_etienne_oehmichen_1924.jpg" style="width: 75%;" /></a>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/SizingLab/sizing_course/main/laboratories/Lab-multirotor/assets/images/helico_4_helices_etienne_oehmichen_1924.jpg"><img alt="Etienne Oehmichen prototype" src="https://raw.githubusercontent.com/SizingLab/sizing_course/main/laboratories/Lab-multirotor/assets/images/helico_4_helices_etienne_oehmichen_1924.jpg" style="width: 75%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 2 </span><span class="caption-text">Etienne Oehmichen prototype</span><a class="headerlink" href="#oehmichen-prototype" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>During the last decade, technological innovations have significantly contributed to the development of smart and powerful multirotor UAVs: miniaturization and microelectronic with the integration of inertial sensors, increased computational power of control processors, new battery technologies with higher energy density, permanent magnet motors with higher torque density and high power densities electric-converters. Multirotors have become a reality, and the applications are numerous: precision agriculture, inspection of power lines, transportation of goods and medical supplies, etc. This aerial vehicle concept is found in a wide range of sizes and weights, allowing the transport of payloads from a few hundred grams to hundreds of kilograms.</p>
 <figure class="align-center" id="parrot-anafi">
-<a class="reference internal image-reference" href="../../_images/drone-anafi-usa-parrot.png"><img alt="Parrot ANAFI USA" src="../../_images/drone-anafi-usa-parrot.png" style="width: 75%;" /></a>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/SizingLab/sizing_course/main/laboratories/Lab-multirotor/assets/images/drone-anafi-usa-parrot.png"><img alt="Parrot ANAFI USA" src="https://raw.githubusercontent.com/SizingLab/sizing_course/main/laboratories/Lab-multirotor/assets/images/drone-anafi-usa-parrot.png" style="width: 75%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 3 </span><span class="caption-text">Parrot ANAFI USA</span><a class="headerlink" href="#parrot-anafi" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <figure class="align-center" id="ehang-216">
-<a class="reference internal image-reference" href="../../_images/Ehang_216.jpg"><img alt="eHang 216" src="../../_images/Ehang_216.jpg" style="width: 75%;" /></a>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/SizingLab/sizing_course/main/laboratories/Lab-multirotor/assets/images/Ehang_216.jpg"><img alt="eHang 216" src="https://raw.githubusercontent.com/SizingLab/sizing_course/main/laboratories/Lab-multirotor/assets/images/Ehang_216.jpg" style="width: 75%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 4 </span><span class="caption-text">eHang 216</span><a class="headerlink" href="#ehang-216" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -591,7 +591,7 @@ document.write(`
 <li><p>N. <strong>BATTERY MONITOR</strong>: Provides in-flight power level monitoring to flight controller.</p></li>
 </ul>
 <figure class="align-center" id="drone-anatomy">
-<a class="reference internal image-reference" href="../../_images/anatomy-of-a-drone.png"><img alt="Anatony of a drone" src="../../_images/anatomy-of-a-drone.png" style="width: 75%;" /></a>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/SizingLab/sizing_course/main/laboratories/Lab-multirotor/assets/images/anatomy-of-a-drone.png"><img alt="Anatony of a drone" src="https://raw.githubusercontent.com/SizingLab/sizing_course/main/laboratories/Lab-multirotor/assets/images/anatomy-of-a-drone.png" style="width: 75%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 5 </span><span class="caption-text">Anatomy of a drone</span><a class="headerlink" href="#drone-anatomy" title="Permalink to this image">#</a></p>
 </figcaption>

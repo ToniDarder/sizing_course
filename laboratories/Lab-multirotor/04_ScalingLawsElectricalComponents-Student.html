@@ -569,7 +569,7 @@ Validation of the obtained scaling laws is realized thanks catalog data.</p>
 <li><p><strong>Discharge Rating (“C” Rating)</strong>: The C Rating is simply a measure of how fast the battery can be discharged safely and without harming the battery. The maximum safe continuous amp draw is here: 50C = 50 x Capacity (in Amps) = 250 A.</p></li>
 </ul>
 <figure class="align-center" id="id1">
-<a class="reference internal image-reference" href="../../_images/LipoBattery.jpeg"><img alt="../../_images/LipoBattery.jpeg" src="../../_images/LipoBattery.jpeg" style="width: 30%;" /></a>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/SizingLab/sizing_course/main/laboratories/Lab-multirotor/assets/images/LipoBattery.jpeg"><img alt="https://raw.githubusercontent.com/SizingLab/sizing_course/main/laboratories/Lab-multirotor/assets/images/LipoBattery.jpeg" src="https://raw.githubusercontent.com/SizingLab/sizing_course/main/laboratories/Lab-multirotor/assets/images/LipoBattery.jpeg" style="width: 30%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 8 </span><span class="caption-text">LiPo Battery</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -612,7 +612,7 @@ Validation of the obtained scaling laws is realized thanks catalog data.</p>
 <h2>Brushless motor<a class="headerlink" href="#brushless-motor" title="Permalink to this heading">#</a></h2>
 <p>Multi-rotor drones use out runner brushless motors which are permanent magnet synchronous motors. The <a class="reference external" href="https://hal.archives-ouvertes.fr/hal-00712986/file/IMECHE_v1.2_full.pdf">following article</a> explains how set up the scaling laws for this technology of component.</p>
 <figure class="align-center" id="id2">
-<a class="reference internal image-reference" href="../../_images/BrushlessMotor.jpg"><img alt="../../_images/BrushlessMotor.jpg" src="../../_images/BrushlessMotor.jpg" style="width: 30%;" /></a>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/SizingLab/sizing_course/main/laboratories/Lab-multirotor/assets/images/BrushlessMotor.jpg"><img alt="https://raw.githubusercontent.com/SizingLab/sizing_course/main/laboratories/Lab-multirotor/assets/images/BrushlessMotor.jpg" src="https://raw.githubusercontent.com/SizingLab/sizing_course/main/laboratories/Lab-multirotor/assets/images/BrushlessMotor.jpg" style="width: 30%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 9 </span><span class="caption-text">Brushless motor</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -688,7 +688,7 @@ Validation of the obtained scaling laws is realized thanks catalog data.</p>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
 <span class="c1"># Read the .csv file with bearing data</span>
-<span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;./assets/data/&quot;</span>
+<span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/SizingLab/sizing_course/main/laboratories/Lab-multirotor/assets/data/&quot;</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="s2">&quot;AXI_mot_db_student.xlsx&quot;</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;openpyxl&quot;</span><span class="p">)</span>
 <span class="c1"># Print the head (first lines of the file)</span>
 <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -905,7 +905,7 @@ Validation of the obtained scaling laws is realized thanks catalog data.</p>
 <h3>Power electronic converter<a class="headerlink" href="#power-electronic-converter" title="Permalink to this heading">#</a></h3>
 <p>ESC (electronic speed controllers) motor controllers are mainly DC/AC converter (inverter) composed of power electronic switchs (Mosfet transistors). We will use here a simple linear regression in order to set up a model for mass estimation.</p>
 <figure class="align-center" id="esc">
-<a class="reference internal image-reference" href="../../_images/ESC.jpeg"><img alt="../../_images/ESC.jpeg" src="../../_images/ESC.jpeg" style="width: 50%;" /></a>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/SizingLab/sizing_course/main/laboratories/Lab-multirotor/assets/images//ESC.jpeg"><img alt="https://raw.githubusercontent.com/SizingLab/sizing_course/main/laboratories/Lab-multirotor/assets/images//ESC.jpeg" src="https://raw.githubusercontent.com/SizingLab/sizing_course/main/laboratories/Lab-multirotor/assets/images//ESC.jpeg" style="width: 50%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 10 </span><span class="caption-text">Electronic Speed Controller (ESC)</span><a class="headerlink" href="#esc" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -918,7 +918,7 @@ The data base gives informations about mass, voltage &amp; current (DC side) and
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
 <span class="c1"># Read the .csv file with bearing data</span>
-<span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;./assets/data/&quot;</span>
+<span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/SizingLab/sizing_course/main/laboratories/Lab-multirotor/assets/data/&quot;</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="s2">&quot;ESC_data.csv&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;;&quot;</span><span class="p">)</span>
 
 <span class="c1"># Print the head (first lines of the file) of the following columns</span>
