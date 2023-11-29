@@ -580,8 +580,12 @@ Validation of the obtained scaling laws is realized thanks catalog data.</p>
 <span class="n">M_bat_ref</span> <span class="o">=</span> <span class="mf">0.273</span>  <span class="c1"># [kg] mass</span>
 
 <span class="c1"># New battery 3300 mA.h 4S</span>
+<span class="n">U_bat</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">*</span> <span class="mf">7.4</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="n">C_bat</span> <span class="o">=</span> <span class="mi">3300</span> <span class="o">/</span> <span class="mi">1000</span>
 
-<span class="c1"># ...</span>
+<span class="n">I_bat_max</span> <span class="o">=</span> <span class="n">I_bat_max_ref</span> <span class="o">*</span> <span class="p">(</span><span class="n">C_bat</span> <span class="o">/</span> <span class="n">C_bat_ref</span><span class="p">)</span>
+
+<span class="n">M_bat</span> <span class="o">=</span> <span class="n">M_bat_ref</span> <span class="o">*</span> <span class="p">(</span><span class="n">C_bat</span> <span class="o">/</span> <span class="n">C_bat_ref</span><span class="p">)</span> <span class="o">*</span>  <span class="p">(</span><span class="n">U_bat</span> <span class="o">/</span> <span class="n">U_bat_ref</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Battery mass: </span><span class="si">{</span><span class="n">M_bat</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> kg&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Max discharge current: </span><span class="si">{</span><span class="n">I_bat_max</span><span class="si">:</span><span class="s2">.0f</span><span class="si">}</span><span class="s2"> A&quot;</span><span class="p">)</span>
@@ -589,17 +593,8 @@ Validation of the obtained scaling laws is realized thanks catalog data.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">11</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">M_bat_ref</span> <span class="o">=</span> <span class="mf">0.273</span>  <span class="c1"># [kg] mass</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="c1"># New battery 3300 mA.h 4S</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> 
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="c1"># ...</span>
-<span class="ne">---&gt; </span><span class="mi">11</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Battery mass: </span><span class="si">{</span><span class="n">M_bat</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> kg&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Max discharge current: </span><span class="si">{</span><span class="n">I_bat_max</span><span class="si">:</span><span class="s2">.0f</span><span class="si">}</span><span class="s2"> A&quot;</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;M_bat&#39; is not defined
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Battery mass: 0.360 kg
+Max discharge current: 165 A
 </pre></div>
 </div>
 </div>
@@ -835,7 +830,7 @@ Validation of the obtained scaling laws is realized thanks catalog data.</p>
     <span class="s2">&quot;.b&quot;</span><span class="p">,</span>
     <span class="n">T_mot_ref</span><span class="p">,</span>
     <span class="n">M_mot_ref</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">,</span>
-    <span class="s2">&quot;.r&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;.g&quot;</span><span class="p">,</span>
 <span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Motor Mass [g]&quot;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Nominal torque [N.m]&quot;</span><span class="p">)</span>
@@ -844,7 +839,7 @@ Validation of the obtained scaling laws is realized thanks catalog data.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/0dad9c0df74392b1600df0cd74db97d87932927b263fa8bd4ab389bd0a9ab2ba.png" src="../../_images/0dad9c0df74392b1600df0cd74db97d87932927b263fa8bd4ab389bd0a9ab2ba.png" />
+<img alt="../../_images/54c1a5629f9090c08c01b2831956fdeb033aad5d265dcd3f2379f71b1f0167df.png" src="../../_images/54c1a5629f9090c08c01b2831956fdeb033aad5d265dcd3f2379f71b1f0167df.png" />
 </div>
 </div>
 </section>
@@ -868,6 +863,7 @@ Validation of the obtained scaling laws is realized thanks catalog data.</p>
 <span class="n">R_mot_data</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;r (omn)&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
 
 <span class="c1"># ...</span>
+<span class="n">R_mot_sl</span> <span class="o">=</span> <span class="n">R_mot_ref</span> <span class="o">*</span> <span class="p">(</span><span class="n">K_T</span><span class="o">/</span><span class="n">K_T_ref</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">T_mot</span> <span class="o">/</span> <span class="n">T_mot_ref</span><span class="p">)</span> <span class="o">**</span> <span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="o">/</span><span class="mf">3.5</span><span class="p">)</span>
 
 <span class="c1"># plot</span>
 <span class="n">h</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -879,21 +875,7 @@ Validation of the obtained scaling laws is realized thanks catalog data.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">12</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="c1"># ...</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> 
-<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="c1"># plot</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="n">h</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">12</span> <span class="n">ax</span><span class="o">.</span><span class="n">loglog</span><span class="p">(</span><span class="n">T_mot</span><span class="p">,</span> <span class="n">R_mot_data</span> <span class="o">/</span> <span class="n">K_T</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;.b&quot;</span><span class="p">,</span> <span class="n">T_mot</span><span class="p">,</span> <span class="n">R_mot_sl</span> <span class="o">/</span> <span class="n">K_T</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;.r&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Resistance/Torque constant^2 [Ohm/(N.m/A)²]&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Nominal torque [N.m]&quot;</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;R_mot_sl&#39; is not defined
-</pre></div>
-</div>
-<img alt="../../_images/5aa844c34abce8e545a3b821b4fb87c6745d9c1bfeca2f14a380859345c39b6f.png" src="../../_images/5aa844c34abce8e545a3b821b4fb87c6745d9c1bfeca2f14a380859345c39b6f.png" />
+<img alt="../../_images/ff378dea357a76c6e60321982f4556ea16b4044f71f6d9a2f38b4391be7a3495.png" src="../../_images/ff378dea357a76c6e60321982f4556ea16b4044f71f6d9a2f38b4391be7a3495.png" />
 </div>
 </div>
 </section>
@@ -1083,19 +1065,8 @@ The data base gives informations about mass, voltage &amp; current (DC side) and
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Matrix X and Y</span>
-<span class="n">XV</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">YV</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
-<span class="n">reg</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()</span>
-
-<span class="n">reg</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">XV</span><span class="p">,</span> <span class="n">YV</span><span class="p">)</span>
-
-<span class="n">y_est</span> <span class="o">=</span> <span class="n">reg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">XV</span><span class="p">)</span>
-<span class="n">yV_est</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="n">y_est</span>
-
-<span class="n">coef</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">reg</span><span class="o">.</span><span class="n">coef_</span><span class="p">)</span>
-<span class="n">intercept</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">reg</span><span class="o">.</span><span class="n">intercept_</span><span class="p">)</span>
-<span class="n">r2</span> <span class="o">=</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">YV</span><span class="p">,</span> <span class="n">y_est</span><span class="p">)</span>
+<span class="c1"># ...</span>
 
 <span class="c1"># plot the data</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">yV_est</span><span class="p">,</span> <span class="s2">&quot;og&quot;</span><span class="p">)</span>
@@ -1112,9 +1083,19 @@ The data base gives informations about mass, voltage &amp; current (DC side) and
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/d9cf4e4b4da24fdd06dbf04e04ee0e4c8345c76c6446d0e0036e130db13129e2.png" src="../../_images/d9cf4e4b4da24fdd06dbf04e04ee0e4c8345c76c6446d0e0036e130db13129e2.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Voltage estimation : V_esc= with R2=0.830
-with Power P_esc [W] and Voltage V_esc [V] of ESC controller
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">10</span><span class="p">],</span> <span class="n">line</span> <span class="mi">6</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Matrix X and Y</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> 
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># ...</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> 
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># plot the data</span>
+<span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">yV_est</span><span class="p">,</span> <span class="s2">&quot;og&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;ESC Power [W]&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;ESC Voltage [V]&quot;</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;yV_est&#39; is not defined
 </pre></div>
 </div>
 </div>
