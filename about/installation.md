@@ -30,9 +30,23 @@ To cancel your local changes and update your project with the lastest version av
 `git pull`
 ```
 
+Then, create a new conda environment by running:
+
+`conda create -n sizing_course python=3.9`
+
+`source activate sizing_course` or `conda activate sizing_course`
+
+
 Then install the required dependencies by running:
 
 `pip install -r sizing_course/requirements.txt`
+
+
+Then, create a new kernel accessible from Jupyter Lab:
+`conda install ipykernel`
+
+`ipython kernel install --user --name=sizing_course`
+
 
 ```{tip}
 To zip the folder you can open a terminal at the father directory of the project and run:
