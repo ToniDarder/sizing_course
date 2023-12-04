@@ -108,3 +108,5 @@ parts:
       - file: laboratories/Lab-watt_project/08_DCDC_converter_sizing_introduction-Student
       - file: laboratories/Lab-watt_project/08_DCDC_converter_sizing_introduction
       - file: laboratories/Lab-watt_project/09_SizingCodeDCDCconverter
+      - file: laboratories/Lab-watt_project/10_LCA_Inductor-Student
+      - file: laboratories/Lab-watt_project/10_LCA_Inductor
