@@ -227,6 +227,15 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../Lab-multirotor/03_PropellerLinearRegression.html">Propellers estimation models with dimensional analysis and linear regressions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Lab-multirotor/04_ScalingLawsElectricalComponents-Student.html">Scaling laws of electrical components</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Lab-multirotor/04_ScalingLawsElectricalComponents.html">Scaling laws of electrical components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lab-multirotor/05_SizingModelsIntroduction.html">Sizing models for multi-rotor definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lab-multirotor/05a_PropellerSelection-Student.html">Propeller selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lab-multirotor/05a_PropellerSelection.html">Propeller selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lab-multirotor/05b_MotorSelection-Student.html">Motor selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lab-multirotor/05b_MotorSelection.html">Motor selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lab-multirotor/05c_BatteryESCSelection-Student.html">Battery and ESC selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lab-multirotor/05c_BatteryESCSelection.html">Battery and ESC selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lab-multirotor/05d_FrameSelection-Student.html">Frame selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Lab-multirotor/05d_FrameSelection.html">Frame selection</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Lab-vega/summary.html">VEGA Launcher TVC EMA</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -618,49 +627,45 @@ document.write(`
 <img alt="../../_images/be177c4884206f9c0847743a521e46fcd0931e9118d5d6b59fb62d0f593b61f8.png" src="../../_images/be177c4884206f9c0847743a521e46fcd0931e9118d5d6b59fb62d0f593b61f8.png" />
 <img alt="../../_images/d73d733237df3d59676a23dd2bf89bc1f86f652efe33b130dc47b80e732ff742.png" src="../../_images/d73d733237df3d59676a23dd2bf89bc1f86f652efe33b130dc47b80e732ff742.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.036125972011676784, 1, 0.9638740279883232]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Consumption per passenger: 20.44 kJ/(Pax.km)
+Consumption per passenger: 20.44 kJ/(Pax.km)
 </pre></div>
 </div>
 <img alt="../../_images/8fba898326fa1c0e7756ce2c990b52729fc18d452e7756922bf692facb54e0c9.png" src="../../_images/8fba898326fa1c0e7756ce2c990b52729fc18d452e7756922bf692facb54e0c9.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     fun: 1.1158089318082165
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     fun: 1.1158969465170516
  message: &#39;Optimization terminated successfully.&#39;
-    nfev: 1759
-     nit: 38
+    nfev: 1174
+     nit: 25
  success: True
-       x: array([0.20481438, 0.26338737, 0.98270643])
-Optimal vector : [0.20481438 0.26338737 0.98270643]
-0.5338101629137351
-Constraints vector : [0.0010935971716579463, 0.00020729684908794098, 0.06618983708626491]
+       x: array([0.14809529, 0.35664349, 0.98929594])
+Optimal vector : [0.14809529 0.35664349 0.98929594]
+0.5722045302065372
+Constraints vector : [0.00994567209685108, 0.00020729684908794098, 0.027795469793462813]
+Consumption per passenger: 17.20 kJ/(Pax.km)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Consumption per passenger: 17.05 kJ/(Pax.km)
-</pre></div>
-</div>
-<img alt="../../_images/489b615759bd701e85e7dffc3ae5a8db425144d9ae6f6f747e1ccb9f6de64db7.png" src="../../_images/489b615759bd701e85e7dffc3ae5a8db425144d9ae6f6f747e1ccb9f6de64db7.png" />
+<img alt="../../_images/71c3793062b1fa8d7e8cdaf319072ad978323a076a3c1631f0fe98726350373d.png" src="../../_images/71c3793062b1fa8d7e8cdaf319072ad978323a076a3c1631f0fe98726350373d.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Calculation of energy consumption of different vehicles: 
 
 Tramway :
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     fun: 1.3155835512285257
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     fun: 1.2943682600385298
  message: &#39;Optimization terminated successfully.&#39;
-    nfev: 1354
-     nit: 29
+    nfev: 1489
+     nit: 32
  success: True
-       x: array([0.29515247, 0.17911407, 0.98962042])
-Consumption per passenger: 20.59 kJ/(Pax.km)
+       x: array([0.10862927, 0.38457753, 0.98831767])
+Consumption per passenger: 20.18 kJ/(Pax.km)
 ----
 Trolleybus :
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     fun: 1.1340254283077316
  message: &#39;Optimization terminated successfully.&#39;
-    nfev: 1399
-     nit: 30
+    nfev: 1264
+     nit: 27
  success: True
-       x: array([0.05882188, 0.7679125 , 0.98925849])
+       x: array([0.04589395, 0.76714236, 0.98822027])
 Consumption per passenger: 33.90 kJ/(Pax.km)
 ----
 Bus :
@@ -668,10 +673,10 @@ Bus :
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     fun: 1.1554437831959297
  message: &#39;Optimization terminated successfully.&#39;
-    nfev: 1219
-     nit: 26
+    nfev: 1399
+     nit: 30
  success: True
-       x: array([0.0463879 , 0.76438028, 0.98823938])
+       x: array([0.05687177, 0.75592901, 0.98899854])
 Consumption per passenger: 35.30 kJ/(Pax.km)
 ----
 Car :
@@ -679,10 +684,10 @@ Car :
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     fun: 1.495083491840943
  message: &#39;Optimization terminated successfully.&#39;
-    nfev: 2524
-     nit: 55
+    nfev: 2794
+     nit: 61
  success: True
-       x: array([0.00528009, 0.6595706 , 0.98932357])
+       x: array([7.85076081e-04, 6.54213465e-01, 9.89723227e-01])
 Consumption per passenger: 93.25 kJ/(Pax.km)
 </pre></div>
 </div>
@@ -867,44 +872,60 @@ Section 8: 300 m at 5.00 m/s whith charger
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     fun: 1.0802796716463516
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     fun: 1.0812474375995766
  message: &#39;Optimization terminated successfully.&#39;
-    nfev: 1669
-     nit: 36
+    nfev: 1714
+     nit: 37
  success: True
-       x: array([0.04960241, 0.79330463, 0.98965413])
+       x: array([0.04950559, 0.80083243, 0.98819836])
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     fun: 1.0945237778934926
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     fun: 1.094531713188785
+ message: &#39;Optimization terminated successfully.&#39;
+    nfev: 904
+     nit: 19
+ success: True
+       x: array([0.09254595, 0.69367037, 0.98789135])
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     fun: 1.1069096481828278
+ message: &#39;Optimization terminated successfully.&#39;
+    nfev: 1354
+     nit: 29
+ success: True
+       x: array([0.16338471, 0.55890291, 0.97349358])
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     fun: 1.0616533763192948
+ message: &#39;Optimization terminated successfully.&#39;
+    nfev: 2119
+     nit: 46
+ success: True
+       x: array([0.03109165, 0.87535431, 0.98909549])
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     fun: 1.0653809490756796
+ message: &#39;Optimization terminated successfully.&#39;
+    nfev: 1309
+     nit: 28
+ success: True
+       x: array([0.07679164, 0.68190986, 0.98839638])
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     fun: 1.0639068253503727
  message: &#39;Optimization terminated successfully.&#39;
     nfev: 1219
      nit: 26
  success: True
-       x: array([0.09407224, 0.6869547 , 0.98653478])
+       x: array([0.06364665, 0.74312874, 0.98864912])
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     fun: 1.1099263043129624
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     fun: 1.0723997244289194
  message: &#39;Optimization terminated successfully.&#39;
-    nfev: 1264
-     nit: 27
+    nfev: 1084
+     nit: 23
  success: True
-       x: array([0.22675166, 0.45210818, 0.97705275])
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     fun: 1.0537924920275576
- message: &#39;Optimization terminated successfully.&#39;
-    nfev: 3109
-     nit: 68
- success: True
-       x: array([0.0268746 , 0.89920502, 0.98987162])
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     fun: 1.0638753299209696
- message: &#39;Optimization terminated successfully.&#39;
-    nfev: 1534
-     nit: 33
- success: True
-       x: array([0.06598628, 0.74590191, 0.98949083])
+       x: array([0.12931601, 0.54330314, 0.98947674])
 </pre></div>
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
@@ -918,7 +939,7 @@ Section 8: 300 m at 5.00 m/s whith charger
 <span class="ne">---&gt; </span><span class="mi">33</span>     <span class="bp">self</span><span class="o">.</span><span class="n">Section</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">optimizeG</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">34</span>     <span class="bp">self</span><span class="o">.</span><span class="n">Section</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 
-<span class="nn">File /tmp/ipykernel_2932/2875550521.py:45,</span> in <span class="ni">OptimSection.optimizeG</span><span class="nt">(self, x0)</span>
+<span class="nn">File /tmp/ipykernel_3290/2875550521.py:45,</span> in <span class="ni">OptimSection.optimizeG</span><span class="nt">(self, x0)</span>
 <span class="g g-Whitespace">     </span><span class="mi">43</span> <span class="k">def</span> <span class="nf">optimizeG</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">x0</span><span class="p">):</span>
 <span class="g g-Whitespace">     </span><span class="mi">44</span>     <span class="n">Xbound</span><span class="o">=</span> <span class="p">[(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">),</span> <span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.99</span><span class="p">)]</span>
 <span class="ne">---&gt; </span><span class="mi">45</span>     <span class="n">res</span><span class="o">=</span><span class="n">differential_evolution</span><span class="p">(</span><span class="n">func</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">objectifG</span><span class="p">,</span> <span class="n">x0</span><span class="o">=</span><span class="n">x0</span><span class="p">,</span> <span class="n">bounds</span><span class="o">=</span><span class="n">Xbound</span><span class="p">)</span>
@@ -956,26 +977,26 @@ Section 8: 300 m at 5.00 m/s whith charger
 <span class="g g-Whitespace">    </span><span class="mi">406</span> <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
 <span class="ne">--&gt; </span><span class="mi">407</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">)</span>
 
-<span class="nn">File /tmp/ipykernel_2932/2875550521.py:29,</span> in <span class="ni">OptimSection.objectifG</span><span class="nt">(self, x)</span>
+<span class="nn">File /tmp/ipykernel_3290/2875550521.py:29,</span> in <span class="ni">OptimSection.objectifG</span><span class="nt">(self, x)</span>
 <span class="g g-Whitespace">     </span><span class="mi">28</span> <span class="k">def</span> <span class="nf">objectifG</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
 <span class="ne">---&gt; </span><span class="mi">29</span>     <span class="bp">self</span><span class="o">.</span><span class="n">solver</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">30</span>     <span class="n">NRJmin</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">xsection</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">Vehicle</span><span class="o">.</span><span class="n">Weight</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">g</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">Vehicle</span><span class="o">.</span><span class="n">Crr</span>
 <span class="g g-Whitespace">     </span><span class="mi">31</span>     <span class="n">pen</span><span class="o">=</span><span class="mi">0</span>
 
-<span class="nn">File /tmp/ipykernel_2932/3938155709.py:91,</span> in <span class="ni">SimulSection.solver</span><span class="nt">(self, x)</span>
+<span class="nn">File /tmp/ipykernel_3290/3938155709.py:88,</span> in <span class="ni">SimulSection.solver</span><span class="nt">(self, x)</span>
+<span class="g g-Whitespace">     </span><span class="mi">85</span> <span class="n">y</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="n">dt</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">dydt</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">87</span> <span class="n">t</span> <span class="o">=</span> <span class="n">t</span> <span class="o">+</span> <span class="n">dt</span>
-<span class="g g-Whitespace">     </span><span class="mi">88</span> <span class="n">NRJ</span> <span class="o">=</span> <span class="n">NRJ</span><span class="o">+</span><span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">F</span><span class="o">*</span><span class="n">dt</span>
-<span class="ne">---&gt; </span><span class="mi">91</span> <span class="bp">self</span><span class="o">.</span><span class="n">tsection</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tsection</span> <span class="o">+</span> <span class="p">[</span><span class="n">t</span><span class="p">]</span>
+<span class="ne">---&gt; </span><span class="mi">88</span> <span class="n">NRJ</span> <span class="o">=</span> <span class="n">NRJ</span><span class="o">+</span><span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">F</span><span class="o">*</span><span class="n">dt</span>
+<span class="g g-Whitespace">     </span><span class="mi">91</span> <span class="bp">self</span><span class="o">.</span><span class="n">tsection</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tsection</span> <span class="o">+</span> <span class="p">[</span><span class="n">t</span><span class="p">]</span>
 <span class="g g-Whitespace">     </span><span class="mi">92</span> <span class="bp">self</span><span class="o">.</span><span class="n">xsection</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">xsection</span> <span class="o">+</span> <span class="p">[</span><span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
-<span class="g g-Whitespace">     </span><span class="mi">93</span> <span class="bp">self</span><span class="o">.</span><span class="n">vsection</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">vsection</span> <span class="o">+</span> <span class="p">[</span><span class="n">y</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
 
 <span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
 </div>
-<img alt="../../_images/1ec72f8742bd5d930d00b17d4a9e8b6a7666dafbd1aec943efd3a0c4855e4450.png" src="../../_images/1ec72f8742bd5d930d00b17d4a9e8b6a7666dafbd1aec943efd3a0c4855e4450.png" />
-<img alt="../../_images/ed9037909bc9521d2eb7096f0ed76c8e6b5c24a221b1eb4d7f9b33d1c1020be6.png" src="../../_images/ed9037909bc9521d2eb7096f0ed76c8e6b5c24a221b1eb4d7f9b33d1c1020be6.png" />
-<img alt="../../_images/6086463dfb7eb15cb35d6787e08c29f3eb3c5596b77fe143d26d7b9d0ffb12bf.png" src="../../_images/6086463dfb7eb15cb35d6787e08c29f3eb3c5596b77fe143d26d7b9d0ffb12bf.png" />
-<img alt="../../_images/9a528a292cf615704ed9b69b1a7061c2fe5999fba09f016bda767edec1f53773.png" src="../../_images/9a528a292cf615704ed9b69b1a7061c2fe5999fba09f016bda767edec1f53773.png" />
+<img alt="../../_images/e880e3ec56e9197a1ddc227d920e1c4b17a6c32bdc408f4e6e94c822cc27213a.png" src="../../_images/e880e3ec56e9197a1ddc227d920e1c4b17a6c32bdc408f4e6e94c822cc27213a.png" />
+<img alt="../../_images/8a6f2db5c79f0358e147743b8d88a800be50d95067800dbaa9e97d623139b9b9.png" src="../../_images/8a6f2db5c79f0358e147743b8d88a800be50d95067800dbaa9e97d623139b9b9.png" />
+<img alt="../../_images/9c38090c0aa08f8a8307ab7839c681fb3805770b65ff078c0e6f4c4a28ea38f5.png" src="../../_images/9c38090c0aa08f8a8307ab7839c681fb3805770b65ff078c0e6f4c4a28ea38f5.png" />
+<img alt="../../_images/cfc64283d2bb8aaefc38f07ed88b266771320f655fcda1e0e9af20d7aef684f4.png" src="../../_images/cfc64283d2bb8aaefc38f07ed88b266771320f655fcda1e0e9af20d7aef684f4.png" />
 </div>
 </div>
 <p>A time vector of evolution of the power required at each section or supplied to each charger is constructed.</p>

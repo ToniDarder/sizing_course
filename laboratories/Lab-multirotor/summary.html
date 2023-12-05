@@ -227,6 +227,15 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="03_PropellerLinearRegression.html">Propellers estimation models with dimensional analysis and linear regressions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="04_ScalingLawsElectricalComponents-Student.html">Scaling laws of electrical components</a></li>
 <li class="toctree-l2"><a class="reference internal" href="04_ScalingLawsElectricalComponents.html">Scaling laws of electrical components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05_SizingModelsIntroduction.html">Sizing models for multi-rotor definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05a_PropellerSelection-Student.html">Propeller selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05a_PropellerSelection.html">Propeller selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05b_MotorSelection-Student.html">Motor selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05b_MotorSelection.html">Motor selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05c_BatteryESCSelection-Student.html">Battery and ESC selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05c_BatteryESCSelection.html">Battery and ESC selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05d_FrameSelection-Student.html">Frame selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05d_FrameSelection.html">Frame selection</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Lab-vega/summary.html">VEGA Launcher TVC EMA</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -458,7 +467,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -474,6 +485,18 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">Table of contents</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#architecture-sizing-scenarios">Architecture &amp; sizing scenarios</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimation-models">Estimation models</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -484,11 +507,24 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="lab-multirotor-case-study">
-<span id="page-lab-vega"></span><h1>Lab - Multirotor case study<a class="headerlink" href="#lab-multirotor-case-study" title="Permalink to this heading">#</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This course is under construction…</p>
-</div>
+<span id="page-lab-multirotor"></span><h1>Lab - Multirotor case study<a class="headerlink" href="#lab-multirotor-case-study" title="Permalink to this heading">#</a></h1>
+<section id="table-of-contents">
+<h2>Table of contents<a class="headerlink" href="#table-of-contents" title="Permalink to this heading">#</a></h2>
+<section id="architecture-sizing-scenarios">
+<h3>Architecture &amp; sizing scenarios<a class="headerlink" href="#architecture-sizing-scenarios" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="01_CaseStudy.html"><span class="doc std std-doc">Case study and architecture presentation</span></a></p></li>
+<li><p><a class="reference internal" href="02_SizingScenariosEquations.html"><span class="doc std std-doc">Sizing scenarios equations</span></a> (<a class="reference internal" href="02_SizingScenariosEquations-Student.html"><span class="doc std std-doc">Student Version</span></a>)</p></li>
+</ol>
+</section>
+<section id="estimation-models">
+<h3>Estimation models<a class="headerlink" href="#estimation-models" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple" start="3">
+<li><p><span class="xref myst">Scaling laws of electrical components</span> (<span class="xref myst">Student Version</span>)</p></li>
+<li><p><span class="xref myst">Linear regression of propellers data</span> (<span class="xref myst">Student Version</span>)</p></li>
+</ol>
+</section>
+</section>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -547,6 +583,24 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-contents">Table of contents</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#architecture-sizing-scenarios">Architecture &amp; sizing scenarios</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimation-models">Estimation models</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
