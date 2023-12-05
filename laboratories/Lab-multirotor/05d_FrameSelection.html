@@ -540,7 +540,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#design-graph">Design graph</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sizing-code-and-optimization">Sizing code and optimization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sizing-code">Sizing code</a></li>
 </ul>
 </li>
 </ul>
@@ -568,29 +568,34 @@ document.write(`
 </figcaption>
 </figure>
 <p>The design graphs for the overall drone system can be found in <a class="reference download internal" download="" href="../../_downloads/b62240d43ab34039ad90d2b56af9efe5/DesignGraphs_Overall_Solution.pdf"><span class="xref download myst">here</span></a>.</p>
-<section id="sizing-code-and-optimization">
-<h3>Sizing code and optimization<a class="headerlink" href="#sizing-code-and-optimization" title="Permalink to this heading">#</a></h3>
+<section id="sizing-code">
+<h3>Sizing code<a class="headerlink" href="#sizing-code" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Specifications</span>
-<span class="n">N_arm</span><span class="o">=</span><span class="mf">4.0</span><span class="c1">#[-] Number of arms</span>
-<span class="n">N_pro_arm</span><span class="o">=</span><span class="mf">1.0</span><span class="c1">#[-] Number of propellers per arm (1 or 2)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Specifications</span>
+<span class="n">N_arm</span> <span class="o">=</span> <span class="mf">4.0</span> <span class="c1"># [-] Number of arms</span>
+<span class="n">N_pro_arm</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="c1"># [-] Number of propellers per arm (1 or 2)</span>
 
 <span class="c1"># Reference parameters for scaling laws</span>
 <span class="n">sigma_max</span> <span class="o">=</span> <span class="mf">280e6</span><span class="o">/</span><span class="mf">4.</span> <span class="c1"># [Pa] Composite max stress (2 reduction for dynamic, 2 reduction for stress concentration)</span>
 <span class="n">rho_s</span> <span class="o">=</span> <span class="mf">1700.</span> <span class="c1"># [kg/m3] Volumic mass of aluminum</span>
 
-<span class="c1"># Assumption</span>
-<span class="n">D_pro</span><span class="o">=</span><span class="mf">0.3</span><span class="c1">#[m] Propeller diameter</span>
-<span class="n">F_pro_to</span><span class="o">=</span><span class="mf">1.0</span><span class="c1">#[N] Thrust for one propeller during take off</span>
+<span class="c1"># Assumptions</span>
+<span class="n">D_pro</span> <span class="o">=</span> <span class="mf">0.3</span> <span class="c1"># [m] Propeller diameter</span>
+<span class="n">F_pro_to</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="c1"># [N] Thrust for one propeller during take off</span>
+
+<span class="c1"># Design variables</span>
+<span class="n">k_D</span> <span class="o">=</span> <span class="mf">0.99</span> <span class="c1"># [-] aspect ratio D_in/D_out for the beam of the frame</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#% FRAME</span>
-<span class="c1"># ---</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Equations</span>
+
 <span class="c1"># Arms selection with propellers size</span>
 <span class="n">alpha_sep</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="n">N_arm</span> <span class="c1"># [rad] interior angle separation between propellers</span>
 <span class="n">L_arm</span> <span class="o">=</span> <span class="n">D_pro</span> <span class="o">/</span> <span class="p">(</span><span class="mf">2.</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">alpha_sep</span><span class="o">/</span><span class="mf">2.</span><span class="p">))</span>  <span class="c1"># [m] length of the arm</span>
@@ -606,18 +611,31 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">whos</span>
+</pre></div>
+</div>
+</div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">#% FRAME</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># ---</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># Arms selection with propellers size</span>
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">alpha_sep</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="n">N_arm</span> <span class="c1"># [rad] interior angle separation between propellers</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">L_arm</span> <span class="o">=</span> <span class="n">D_pro</span> <span class="o">/</span> <span class="p">(</span><span class="mf">2.</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">alpha_sep</span><span class="o">/</span><span class="mf">2.</span><span class="p">))</span>  <span class="c1"># [m] length of the arm</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="c1"># Tube diameter &amp; thickness selection with take-off scenario</span>
-
-<span class="ne">NameError</span>: name &#39;np&#39; is not defined
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Variable    Type       Data/Info
+--------------------------------
+D_in_arm    float64    0.009126226336644873
+D_out_arm   float64    0.009218410441055428
+D_pro       float      0.3
+F_pro_to    float      1.0
+L_arm       float64    0.21213203435596426
+M_arms      float64    0.0019158884043039236
+M_body      float64    0.0028738326064558853
+M_frame     float64    0.004789721010759809
+N_arm       float      4.0
+N_pro_arm   float      1.0
+alpha_sep   float      1.5707963267948966
+k_D         float      0.99
+np          module     &lt;module &#39;numpy&#39; from &#39;/op&lt;...&gt;kages/numpy/__init__.py&#39;&gt;
+rho_s       float      1700.0
+sigma_max   float      70000000.0
 </pre></div>
 </div>
 </div>
@@ -690,7 +708,7 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#design-graph">Design graph</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sizing-code-and-optimization">Sizing code and optimization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sizing-code">Sizing code</a></li>
 </ul>
 </li>
 </ul>
