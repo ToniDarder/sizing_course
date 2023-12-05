@@ -545,6 +545,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-of-the-environmental-impacts-between-the-light-inductor-and-the-eco-designed-one">Comparison of the environmental impacts between the “light” inductor and the “eco-designed” one.</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix">Appendix</a></li>
 </ul>
             </nav>
         </div>
@@ -1667,7 +1668,7 @@ document.write(`
 
 <span class="c1"># Optimization with SLSQP algorithm</span>
 <span class="n">contrainte</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">SizingInductor</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s1">&#39;Const&#39;</span><span class="p">)</span>
-<span class="n">objectif</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">SizingInductor</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s1">&#39;mass&#39;</span><span class="p">)</span>
+<span class="n">objectif</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">SizingInductor</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s1">&#39;mass&#39;</span><span class="p">)</span>  <span class="c1"># To modify according to the objective function (e.g., &#39;climate change&#39;)</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">optimize</span><span class="o">.</span><span class="n">fmin_slsqp</span><span class="p">(</span><span class="n">func</span><span class="o">=</span><span class="n">objectif</span><span class="p">,</span> <span class="n">x0</span><span class="o">=</span><span class="n">parameters</span><span class="p">,</span> 
                                    <span class="n">bounds</span><span class="o">=</span><span class="p">[(</span><span class="mf">1e-3</span><span class="p">,</span><span class="mf">1e-1</span><span class="p">),(</span><span class="mi">1</span><span class="p">,</span><span class="mi">50</span><span class="p">)],</span>
                                    <span class="n">f_ieqcons</span><span class="o">=</span><span class="n">contrainte</span><span class="p">,</span> <span class="nb">iter</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">acc</span><span class="o">=</span><span class="mf">1e-6</span><span class="p">)</span>
@@ -2220,6 +2221,10 @@ Final characteristics after optimization :
 </div>
 </section>
 </section>
+<section id="appendix">
+<h2>Appendix<a class="headerlink" href="#appendix" title="Permalink to this heading">#</a></h2>
+<p><img alt="LCA steps" src="https://raw.githubusercontent.com/SizingLab/sizing_course/main/laboratories/Lab-watt_project/assets/images/lca_steps.JPG" /></p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -2290,6 +2295,7 @@ Final characteristics after optimization :
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-of-the-environmental-impacts-between-the-light-inductor-and-the-eco-designed-one">Comparison of the environmental impacts between the “light” inductor and the “eco-designed” one.</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix">Appendix</a></li>
 </ul>
   </nav></div>
 
