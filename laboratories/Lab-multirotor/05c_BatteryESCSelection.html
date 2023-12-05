@@ -540,7 +540,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#design-graph">Design graph</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sizing-code-and-optimization">Sizing code and optimization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sizing-code">Sizing code</a></li>
 </ul>
 </li>
 </ul>
@@ -574,40 +574,45 @@ document.write(`
 </figcaption>
 </figure>
 <p>The design graphs for the overall drone system can be found in <a class="reference download internal" download="" href="../../_downloads/b62240d43ab34039ad90d2b56af9efe5/DesignGraphs_Overall_Solution.pdf"><span class="xref download myst">here</span></a>.</p>
-<section id="sizing-code-and-optimization">
-<h3>Sizing code and optimization<a class="headerlink" href="#sizing-code-and-optimization" title="Permalink to this heading">#</a></h3>
+<section id="sizing-code">
+<h3>Sizing code<a class="headerlink" href="#sizing-code" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Specifications</span>
-<span class="n">N_pro</span><span class="o">=</span><span class="mf">4.0</span><span class="c1">#[-] Number of propellers</span>
-<span class="n">M_pay</span><span class="o">=</span><span class="mf">1.0</span><span class="c1">#[kg] Payload mass</span>
+<span class="n">N_pro</span><span class="o">=</span><span class="mf">4.0</span> <span class="c1"># [-] Number of propellers</span>
+<span class="n">M_pay</span><span class="o">=</span><span class="mf">1.0</span> <span class="c1"># [kg] Payload mass</span>
+<span class="n">nu_esc</span> <span class="o">=</span> <span class="mf">0.95</span> <span class="c1"># [–] ESC efficiency</span>
 
 <span class="c1"># Reference parameters for scaling laws</span>
 <span class="c1"># Ref : MK-quadro</span>
 <span class="n">M_bat_ref</span> <span class="o">=</span> <span class="mf">.329</span> <span class="c1"># [kg] mass</span>
 <span class="n">E_bat_ref</span> <span class="o">=</span> <span class="mf">220.</span><span class="o">*</span><span class="mf">3600.</span><span class="o">*</span><span class="mf">.329</span> <span class="c1"># [J]</span>
+<span class="n">C_bat_ref</span><span class="o">=</span> <span class="mi">5</span> <span class="c1"># [Ah] Capacity</span>
+<span class="n">I_bat_max_ref</span> <span class="o">=</span> <span class="mi">50</span><span class="o">*</span><span class="n">C_bat_ref</span> <span class="c1"># [A] max discharge current</span>
 
 <span class="c1"># Ref : Turnigy K_Force 70HV </span>
 <span class="n">P_esc_ref</span> <span class="o">=</span> <span class="mf">3108.</span> <span class="c1"># [W] Power</span>
 <span class="n">M_esc_ref</span> <span class="o">=</span> <span class="mf">.115</span> <span class="c1"># [kg] Mass</span>
 
-<span class="c1"># Assumption</span>
-<span class="n">U_bat_est</span><span class="o">=</span><span class="mf">14.0</span><span class="c1">#[V] Battery voltage estimation</span>
-<span class="n">P_el_mot_hov</span><span class="o">=</span><span class="mf">10.0</span><span class="c1">#[W] Electrical power consumption for one motor during hover</span>
-<span class="n">P_el_mot_to</span><span class="o">=</span><span class="mf">30.0</span><span class="c1">#[W] Electrical power consumption for one motor during takeoff</span>
-<span class="n">U_mot_to</span><span class="o">=</span><span class="mf">12.0</span><span class="c1">#[V] Motor voltage during takeoff</span>
+<span class="c1"># Assumptions</span>
+<span class="n">U_bat_est</span><span class="o">=</span><span class="mf">14.0</span> <span class="c1"># [V] Battery voltage estimation</span>
+<span class="n">P_el_mot_hov</span><span class="o">=</span><span class="mf">10.0</span> <span class="c1"># [W] Electrical power consumption for one motor during hover</span>
+<span class="n">P_el_mot_to</span><span class="o">=</span><span class="mf">30.0</span> <span class="c1"># [W] Electrical power consumption for one motor during takeoff</span>
+<span class="n">U_mot_to</span><span class="o">=</span><span class="mf">12.0</span> <span class="c1"># [V] Motor voltage during takeoff</span>
+
+<span class="c1"># Design variables</span>
+<span class="n">k_vb</span> <span class="o">=</span> <span class="mf">1.</span> <span class="c1"># oversizing coefficient for voltage evaluation</span>
+<span class="n">k_mb</span> <span class="o">=</span> <span class="mf">1.</span> <span class="c1"># ratio battery/load mass</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Design variables</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Equations</span>
 
-<span class="c1">#% BATTERY</span>
-<span class="c1"># ---     </span>
 <span class="c1"># Voltage selection with takeoff scenario</span>
-<span class="c1"># U_bat = k_vb*1.84*P_pro_to**(0.36)  # [V] battery voltage estimation</span>
+<span class="n">U_bat</span> <span class="o">=</span> <span class="n">k_vb</span><span class="o">*</span><span class="mf">1.84</span><span class="o">*</span><span class="n">P_el_mot_to</span><span class="o">**</span><span class="p">(</span><span class="mf">0.36</span><span class="p">)</span>  <span class="c1"># [V] battery voltage estimation</span>
 
 <span class="c1"># Energy selection with payload mass</span>
 <span class="n">M_bat</span> <span class="o">=</span> <span class="n">k_mb</span> <span class="o">*</span> <span class="n">M_pay</span>  <span class="c1"># [kg] Battery mass</span>
@@ -619,7 +624,7 @@ document.write(`
 <span class="n">P_bat_max</span> <span class="o">=</span> <span class="n">U_bat</span> <span class="o">*</span> <span class="n">I_bat_max</span>  <span class="c1"># [W] Max power</span>
 
 <span class="c1"># Performance in hover</span>
-<span class="n">I_bat_hov</span> <span class="o">=</span> <span class="p">(</span><span class="n">P_el_mot_hov</span> <span class="o">*</span> <span class="n">N_pro</span><span class="p">)</span> <span class="o">/</span><span class="mf">.95</span><span class="o">/</span><span class="n">U_bat</span>  <span class="c1"># [A] Current of the battery</span>
+<span class="n">I_bat_hov</span> <span class="o">=</span> <span class="p">(</span><span class="n">P_el_mot_hov</span> <span class="o">*</span> <span class="n">N_pro</span><span class="p">)</span> <span class="o">/</span> <span class="n">nu_esc</span> <span class="o">/</span> <span class="n">U_bat</span>  <span class="c1"># [A] Current of the battery</span>
 
 
 <span class="c1">#% ESC</span>
@@ -633,21 +638,41 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">whos</span>
+</pre></div>
+</div>
+</div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">9</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">#Design variables</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> 
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1">#% BATTERY</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> 
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="c1"># Energy selection with payload mass</span>
-<span class="ne">----&gt; </span><span class="mi">9</span> <span class="n">M_bat</span> <span class="o">=</span> <span class="n">k_mb</span> <span class="o">*</span> <span class="n">M_pay</span>  <span class="c1"># [kg] Battery mass</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="n">E_bat</span> <span class="o">=</span> <span class="n">E_bat_ref</span> <span class="o">*</span> <span class="n">M_bat</span><span class="o">/</span><span class="n">M_bat_ref</span> <span class="o">*</span> <span class="mf">.8</span>  <span class="c1"># [J] Energy  of the battery (.8 coefficient because 80% use only of the total capacity)</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="c1"># Estimation models</span>
-
-<span class="ne">NameError</span>: name &#39;k_mb&#39; is not defined
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Variable        Type     Data/Info
+----------------------------------
+C_bat           float    101212.39316709602
+C_bat_ref       int      5
+E_bat           float    633600.0
+E_bat_ref       float    260568.0
+I_bat_hov       float    6.725969774527912
+I_bat_max       float    5060619.658354801
+I_bat_max_ref   int      250
+M_bat           float    1.0
+M_bat_ref       float    0.329
+M_esc           float    0.0005790796638241396
+M_esc_ref       float    0.115
+M_pay           float    1.0
+N_pro           float    4.0
+P_bat_max       float    31680000.0
+P_el_mot_hov    float    10.0
+P_el_mot_to     float    30.0
+P_esc           float    15.650257349264573
+P_esc_ref       float    3108.0
+U_bat           float    6.260102939705829
+U_bat_est       float    14.0
+U_esc           float    4.952740310797201
+U_mot_to        float    12.0
+k_mb            float    1.0
+k_vb            float    1.0
+nu_esc          float    0.95
 </pre></div>
 </div>
 </div>
@@ -720,7 +745,7 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#design-graph">Design graph</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sizing-code-and-optimization">Sizing code and optimization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sizing-code">Sizing code</a></li>
 </ul>
 </li>
 </ul>

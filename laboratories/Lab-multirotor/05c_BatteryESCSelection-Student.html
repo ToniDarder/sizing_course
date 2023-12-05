@@ -540,7 +540,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#design-graph">Design graph</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sizing-code-and-optimization">Sizing code and optimization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sizing-code">Sizing code</a></li>
 </ul>
 </li>
 </ul>
@@ -575,7 +575,7 @@ document.write(`
 </figure>
 <div class="exercise admonition" id="exercice_dg_battery_esc">
 
-<p class="admonition-title"><span class="caption-number">Exercise 6 </span></p>
+<p class="admonition-title"><span class="caption-number">Exercise 8 </span></p>
 <section id="exercise-content">
 <ul class="simple">
 <li><p>Give the main sizing problems you are able to detect.</p></li>
@@ -585,46 +585,77 @@ document.write(`
 </ul>
 </section>
 </div>
-<section id="sizing-code-and-optimization">
-<h3>Sizing code and optimization<a class="headerlink" href="#sizing-code-and-optimization" title="Permalink to this heading">#</a></h3>
-<blockquote>
-<div><p>Exercice: propose a sizing code for the selection of a battery and ESC.</p>
-</div></blockquote>
+<section id="sizing-code">
+<h3>Sizing code<a class="headerlink" href="#sizing-code" title="Permalink to this heading">#</a></h3>
+<div class="exercise admonition" id="exercice_dg_esc_bat">
+
+<p class="admonition-title"><span class="caption-number">Exercise 9 </span></p>
+<section id="exercise-content">
+<p>Propose a sizing code for the ESC and battery</p>
+</section>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Specifications</span>
-<span class="n">N_pro</span> <span class="o">=</span> <span class="mf">4.0</span>  <span class="c1"># [-] Number of propellers</span>
-<span class="n">M_pay</span> <span class="o">=</span> <span class="mf">1.0</span>  <span class="c1"># [kg] Payload mass</span>
+<span class="n">N_pro</span><span class="o">=</span><span class="mf">4.0</span> <span class="c1"># [-] Number of propellers</span>
+<span class="n">M_pay</span><span class="o">=</span><span class="mf">1.0</span> <span class="c1"># [kg] Payload mass</span>
+<span class="n">nu_esc</span> <span class="o">=</span> <span class="mf">0.95</span> <span class="c1"># [–] ESC efficiency</span>
 
 <span class="c1"># Reference parameters for scaling laws</span>
 <span class="c1"># Ref : MK-quadro</span>
-<span class="n">M_bat_ref</span> <span class="o">=</span> <span class="mf">0.329</span>  <span class="c1"># [kg] mass</span>
-<span class="n">E_bat_ref</span> <span class="o">=</span> <span class="mf">220.0</span> <span class="o">*</span> <span class="mf">3600.0</span> <span class="o">*</span> <span class="mf">0.329</span>  <span class="c1"># [J]</span>
+<span class="n">M_bat_ref</span> <span class="o">=</span> <span class="mf">.329</span> <span class="c1"># [kg] mass</span>
+<span class="n">E_bat_ref</span> <span class="o">=</span> <span class="mf">220.</span><span class="o">*</span><span class="mf">3600.</span><span class="o">*</span><span class="mf">.329</span> <span class="c1"># [J]</span>
+<span class="n">C_bat_ref</span><span class="o">=</span> <span class="mi">5</span> <span class="c1"># [Ah] Capacity</span>
+<span class="n">I_bat_max_ref</span> <span class="o">=</span> <span class="mi">50</span><span class="o">*</span><span class="n">C_bat_ref</span> <span class="c1"># [A] max discharge current</span>
 
-<span class="c1"># Ref : Turnigy K_Force 70HV</span>
-<span class="n">P_esc_ref</span> <span class="o">=</span> <span class="mf">3108.0</span>  <span class="c1"># [W] Power</span>
-<span class="n">M_esc_ref</span> <span class="o">=</span> <span class="mf">0.115</span>  <span class="c1"># [kg] Mass</span>
+<span class="c1"># Ref : Turnigy K_Force 70HV </span>
+<span class="n">P_esc_ref</span> <span class="o">=</span> <span class="mf">3108.</span> <span class="c1"># [W] Power</span>
+<span class="n">M_esc_ref</span> <span class="o">=</span> <span class="mf">.115</span> <span class="c1"># [kg] Mass</span>
 
-<span class="c1"># Assumption</span>
-<span class="n">U_bat_est</span> <span class="o">=</span> <span class="mf">14.0</span>  <span class="c1"># [V] Battery voltage estimation</span>
-<span class="n">P_el_mot_hov</span> <span class="o">=</span> <span class="mf">10.0</span>  <span class="c1"># [W] Electrical power consumption for one motor during hover</span>
-<span class="n">P_el_mot_to</span> <span class="o">=</span> <span class="mf">30.0</span>  <span class="c1"># [W] Electrical power consumption for one motor during takeoff</span>
-<span class="n">U_mot_to</span> <span class="o">=</span> <span class="mf">12.0</span>  <span class="c1"># [V] Motor voltage during takeoff</span>
+<span class="c1"># Assumptions</span>
+<span class="n">U_bat_est</span><span class="o">=</span><span class="mf">14.0</span> <span class="c1"># [V] Battery voltage estimation</span>
+<span class="n">P_el_mot_hov</span><span class="o">=</span><span class="mf">10.0</span> <span class="c1"># [W] Electrical power consumption for one motor during hover</span>
+<span class="n">P_el_mot_to</span><span class="o">=</span><span class="mf">30.0</span> <span class="c1"># [W] Electrical power consumption for one motor during takeoff</span>
+<span class="n">U_mot_to</span><span class="o">=</span><span class="mf">12.0</span> <span class="c1"># [V] Motor voltage during takeoff</span>
+
+<span class="c1"># Design variables</span>
+
+<span class="c1">## To be completed</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Design variables</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Equations</span>
 
-<span class="c1"># -----------------------</span>
-<span class="c1"># equations</span>
-<span class="c1"># -----------------------</span>
-
-<span class="c1"># Hover --&gt; autonomy</span>
-
-<span class="c1"># ESC</span>
+<span class="c1">## To be completed</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">whos</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Variable        Type     Data/Info
+----------------------------------
+C_bat_ref       int      5
+E_bat_ref       float    260568.0
+I_bat_max_ref   int      250
+M_bat_ref       float    0.329
+M_esc_ref       float    0.115
+M_pay           float    1.0
+N_pro           float    4.0
+P_el_mot_hov    float    10.0
+P_el_mot_to     float    30.0
+P_esc_ref       float    3108.0
+U_bat_est       float    14.0
+U_mot_to        float    12.0
+nu_esc          float    0.95
 </pre></div>
 </div>
 </div>
@@ -697,7 +728,7 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#design-graph">Design graph</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sizing-code-and-optimization">Sizing code and optimization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sizing-code">Sizing code</a></li>
 </ul>
 </li>
 </ul>

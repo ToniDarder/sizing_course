@@ -540,7 +540,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#design-graph">Design graph</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sizing-code-and-optimization">Sizing code and optimization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sizing-code">Sizing code</a></li>
 </ul>
 </li>
 </ul>
@@ -568,8 +568,8 @@ document.write(`
 </figcaption>
 </figure>
 <p>The design graphs for the overall drone system can be found in <a class="reference download internal" download="" href="../../_downloads/b62240d43ab34039ad90d2b56af9efe5/DesignGraphs_Overall_Solution.pdf"><span class="xref download myst">here</span></a>.</p>
-<section id="sizing-code-and-optimization">
-<h3>Sizing code and optimization<a class="headerlink" href="#sizing-code-and-optimization" title="Permalink to this heading">#</a></h3>
+<section id="sizing-code">
+<h3>Sizing code<a class="headerlink" href="#sizing-code" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Specifications</span>
@@ -584,22 +584,27 @@ document.write(`
 <span class="n">K_T_ref</span> <span class="o">=</span> <span class="mf">0.03</span> <span class="c1"># [N.m/A] torque coefficient</span>
 <span class="n">T_mot_fr_ref</span> <span class="o">=</span> <span class="mf">0.03</span> <span class="c1"># [N.m] friction torque (zero load, nominal speed)</span>
 
-<span class="c1"># Assumption</span>
+<span class="c1"># Assumptions</span>
 <span class="n">T_pro_to</span><span class="o">=</span><span class="mf">0.5</span><span class="c1">#[N.m] Propeller Torque during takeoff</span>
+<span class="n">P_pro_to</span><span class="o">=</span><span class="mi">100</span><span class="c1">#[W] Propeller Power during takeoff</span>
 <span class="n">Omega_pro_to</span><span class="o">=</span><span class="mf">400.0</span><span class="c1">#[rad/s] Propeller speed during takeoff</span>
 <span class="n">T_pro_hov</span><span class="o">=</span><span class="mf">1.0</span><span class="c1">#[N.m] Propeller Torque during hover</span>
+<span class="n">P_pro_hov</span><span class="o">=</span><span class="mi">50</span><span class="c1">#[W] Propeller Power during hover</span>
 <span class="n">Omega_pro_hov</span><span class="o">=</span><span class="mf">0.22</span><span class="c1">#[rad/s] Propeller speed during hover</span>
 <span class="n">U_bat_est</span><span class="o">=</span> <span class="mf">14.0</span><span class="c1">#[V] Battery voltage value (estimation)</span>
+
+<span class="c1"># Design variables</span>
+<span class="n">k_vb</span> <span class="o">=</span> <span class="mf">1.</span> <span class="c1"># oversizing coefficient for voltage evaluation</span>
+<span class="n">k_mot</span> <span class="o">=</span> <span class="mf">1.</span> <span class="c1"># over sizing coefficient on the motor torque</span>
+<span class="n">k_speed_mot</span> <span class="o">=</span> <span class="mf">1.2</span> <span class="c1"># adaption winding coef on the motor speed</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Design variables</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Equations</span>
 
-<span class="c1">#% MOTOR</span>
-<span class="c1"># --- </span>
 <span class="c1"># Nominal torque selection with hover scenario</span>
 <span class="n">T_nom_mot</span> <span class="o">=</span> <span class="n">k_mot</span> <span class="o">*</span> <span class="n">T_pro_hov</span>  <span class="c1"># [N*m] Motor nominal torque per propeller</span>
 
@@ -625,20 +630,45 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">whos</span>
+</pre></div>
+</div>
+</div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">6</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">#Design variables</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> 
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1">#% MOTOR</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># --- </span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># Nominal torque selection with hover scenario</span>
-<span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">T_nom_mot</span> <span class="o">=</span> <span class="n">k_mot</span> <span class="o">*</span> <span class="n">T_pro_hov</span>  <span class="c1"># [N*m] Motor nominal torque per propeller</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="c1"># Torque constant selection with take-off scenario</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="n">U_bat</span> <span class="o">=</span> <span class="n">k_vb</span><span class="o">*</span><span class="mf">1.84</span><span class="o">*</span><span class="n">P_pro_to</span><span class="o">**</span><span class="p">(</span><span class="mf">0.36</span><span class="p">)</span>  <span class="c1"># [V] battery voltage estimation</span>
-
-<span class="ne">NameError</span>: name &#39;k_mot&#39; is not defined
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Variable        Type     Data/Info
+----------------------------------
+I_mot_hov       float    50.43255613781267
+I_mot_to        float    25.57872068611814
+K_T             float    0.020117619309574616
+K_T_ref         float    0.03
+M_mot           float    0.279506832794264
+M_mot_ref       float    0.575
+Omega_pro_hov   float    0.22
+Omega_pro_to    float    400.0
+P_el_mot_hov    float    114.400456104866
+P_el_mot_to     float    235.20395039293444
+P_pro_hov       int      50
+P_pro_to        int      100
+R_mot           float    0.04489082730970943
+R_mot_ref       float    0.03
+T_max_mot       float    1.2142857142857142
+T_max_mot_ref   float    2.8171428571428567
+T_mot_fr        float    0.014582965189265948
+T_mot_fr_ref    float    0.03
+T_nom_mot       float    1.0
+T_nom_mot_ref   float    2.32
+T_pro_hov       float    1.0
+T_pro_to        float    0.5
+U_bat           float    9.656457268595815
+U_bat_est       float    14.0
+U_mot_hov       float    2.2683850446178813
+U_mot_to        float    9.195297656953668
+k_mot           float    1.0
+k_speed_mot     float    1.2
+k_vb            float    1.0
 </pre></div>
 </div>
 </div>
@@ -711,7 +741,7 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#design-graph">Design graph</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sizing-code-and-optimization">Sizing code and optimization</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sizing-code">Sizing code</a></li>
 </ul>
 </li>
 </ul>
