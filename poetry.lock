@@ -1735,6 +1735,21 @@ tornado = ">=6.1.0"
 test = ["check-manifest", "coverage", "jupyterlab-server[test]", "pre-commit", "pytest (>=6.0)", "pytest-check-links (>=0.5)", "pytest-console-scripts", "pytest-cov", "pytest-jupyter (>=0.5.3)", "requests", "requests-cache", "virtualenv"]
 
 [[package]]
+name = "jupyterlab-drawio"
+version = "0.9.0"
+description = "A JupyterLab extension for embedding drawio / mxgraph."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+files = [
+    {file = "jupyterlab-drawio-0.9.0.tar.gz", hash = "sha256:972cf2007ee654d97a836a1fa4c32c0eed9955db84c576ea7d9e52e5c62cc626"},
+    {file = "jupyterlab_drawio-0.9.0-py3-none-any.whl", hash = "sha256:51d481a6366537a0eafb514ecdec1ba384d7930d3a285df8878150780d02d93b"},
+]
+
+[package.dependencies]
+jupyterlab = ">=3.0.0,<4.0.0"
+
+[[package]]
 name = "jupyterlab-imarkdown"
 version = "0.2.0"
 description = "A JupyterLab extension to render expressions given in Markdown."
@@ -4925,4 +4940,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8"
-content-hash = "929ddae6d1545ea248f9552f35d0ca1d595d68f981b4a619dd83ce1f594b5d86"
+content-hash = "ebabc17a8061f2b5030468856bc6a3ba23800482537c353b395a8ffcf9daad2f"
