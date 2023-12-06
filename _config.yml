@@ -1,6 +1,6 @@
 # Book settings
 title: Sizing and optimization of mechatronic systems
-author: Marc Budinger, Scott Delbecq
+author: Marc Budinger, Scott Delbecq, Félix Pollet
 logo: images/logo.png
 copyright: "2023"
 exclude_patterns: ["LICENSE.md", "README.md", _build, .DS_Store, "**.ipynb_checkpoints"]
